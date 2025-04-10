@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techsys Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/menu.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../imagenes/logo_white.png" alt="Logo">
+            </div>
+            <button id="menu-toggle" class="menu-btn">
+                <i class="bi bi-list"></i>
+            </button>                        
+            <nav id="nav-menu" class="hidden">           
+                    <ul class="nav-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="explicacion.html">Explicación</a></li>
+                        <li><a href="documentacion.html">Documentación</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+            </nav>
+        </div>
+        <h1>Explicacion</h1>
+        <h3>Breve Explicación sobre Proxmox</h3>
+    </header><br>
+    <aside class="sidebar2">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="#Que-es-Proxmox">Qué es Proxmox</a></li>
+            <li><a href="#Como-funciona-Proxmox">Como funciona Proxmox</a></li>
+            <li><a href="#Caracteristicas-Principales">Características Principales de Proxmox</a></li>
+            <li><a href="#Herramientas-similares">Herramientas similares a Proxmox</a></li>
+        </ul>
+    </aside>
+    <div class="informacion2">
+    <h3 id="Que-es-Proxmox">Qué es Proxmox</h3>  
+        <p>
+            Proxmox Virtual Environment, o Proxmox VE es un entorno
+            de virtualización de servidores de código abierto que permite
+            a los usuarios gestionar máquinas virtuales, contenedores y almacenamiento
+            definido por software.
+        </p><br>
+    <h3 id="Como-funciona-Proxmox">Como funciona Proxmox</h3>
+        <p>
+            Proxmox funciona mediante la implementación de hipervisores KVM (
+            Kernel-based Virtual Machine) y LXC (Linux Containers), que
+            sirven para crear y gestionar entornos virtuales. Los usuarios
+            pueden abrir múltiples máquinas virtuales y contenedores en un
+            solo servidor físico. La plataforma ofrece una interfaz web que
+            facilita la administración de estos recursos y permite realizar
+            tareas como la creación, clonación y migración de máquinas virtuales,
+            así como la configuración de redes y almacenamiento.
+        </p><br>
+    <h3 id="Caracteristicas-Principales">Características Principales de Proxmox</h3>
+        <p>Proxmox sirve para gestionar entornos virtuales de manera eficiente y ampliable. Sus principales usos son:
+        </p>
+        <li><strong>Gestión centralizada: </strong>Proxmox VE ofrece una interfaz web intuitiva
+            que permite a los administradores gestionar todas las máquinas virtuales
+            y contenedores desde un único punto de control. Gracias a esta interfaz
+            centralizada, la administración resulta más sencilla y se mejora la eficiencia operativa.
+        </li><br>
+        <li><strong>Copias de seguridad y recuperación:</strong> Proxmox VE incluye un sistema integrado
+            de copias de seguridad que permite realizar copias de seguridad programadas y restaurar datos
+            de manera eficiente. Esta funcionalidad es esencial para la recuperación ante desastres y para
+            proteger datos críticos.
+        </li><br>
+        <li><strong>Virtualización completa y basada en contenedores:</strong> Proxmox VE ofrece
+            virtualización completa (KVM) y virtualización basada en contenedores (LXC), de modo que
+            los usuarios pueden elegir la tecnología que mejor se adapte a sus necesidades específicas.
+            Las máquinas virtuales proporcionan un aislamiento completo del sistema operativo, mientras
+            que los contenedores son más ligeros y eficientes en el uso de recursos.
+        </li><br>
+        </ul><br>
+    <h3 id="Herramientas-similares">Herramientas similares a Proxmox</h3>
+        <p> A continuación, veremos las diferentes herramientas que podemos utilizar y que se asemejan a Proxmox o hacen
+            lo mismo.</p>
+        <li><strong>VMware vSphere: </strong> VMware vSphere es una de las
+            plataformas de virtualización empresarial más populares del mercado. Incluye
+            funciones avanzadas como migración en vivo, alta disponibilidad y gestión de recursos
+            distribuidos. Sin embargo, es una solución propietaria que tiene un coste elevado.
+        </li><br>
+        <li><strong>Microsoft Hyper-V: </strong> Similar a VMware vSphere, requiere
+            Windows Server para funcionar, incluyendo migración en vivo,alta disponibilidad y clustering.
+            Hyper-V es una buena alternativa para quienes prefieren utilizar tecnologías de Microsoft,
+            pero puede no tener tantas funciones como VMware. También es caro.
+        </li><br>
+        </ul><br>
+    </div>
+    <footer>
+        <div class="separator"></div>
+    </footer>
+</body>
+
+</html>

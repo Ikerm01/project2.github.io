@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techsys Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/menu.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="../imagenes/logo_white.png" alt="Logo">
+            </div>
+            <button id="menu-toggle" class="menu-btn">
+                <i class="bi bi-list"></i>
+            </button>
+            <nav id="nav-menu" class="hidden">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="explicacion.html">Explicación</a></li>
+                    <li><a href="documentacion.html">Documentación</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1>Documentacion</h1>
+    </header><br>
+    <aside class="sidebar">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="#documentación-de-proxmox">Introducción</a></li>
+            <li><a href="#2-ventajas-y-desventajas">Ventajas y Desventajas</a></li>
+            <li><a href="#3-funcionamiento">Funcionamiento</a></li>
+            <li><a href="#pfsense">PFSense</a></li>
+            <li><a href="#proxmox-ve">Proxmox VE</a></li>
+            <li><a href="#proxmox-bs">Proxmox BS</a></li>
+            <li><a href="#4-documentaci-n-del-bot-de-telegram-con-google-apps-script">Documentacion del Bot de Telegram</a></li>
+            <li><a href="#5-hardware-compatible">Hardware Compatible</a></li>
+            <li><a href="#6-webgrafía">Webgrafía</a></li>
+        </ul>
+    </aside>
+    <div class="informacion2">
+        <h3 id="1-introducción">1. Introducción</h3>
+        <p>En esta sección, se abordará el funcionamiento de herramientas como <strong>PFSense</strong>, así como el
+            hardware necesario para implementar <strong>Proxmox VE</strong>. También se incluirán ilustraciones
+            detalladas sobre el proceso de instalación, sus características más relevantes y referencias de sitios
+            web consultados.</p><br>
+
+        <h3 id="2-ventajas-y-desventajas">2. Ventajas y Desventajas</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th><strong>Ventajas</strong></th>
+                    <th><strong>Desventajas</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aumenta la productividad, eficacia, agilidad y capacidad de respuesta del departamento de
+                        TI.
+                    </td>
+                    <td>Para empresas pequeñas, puede ser difícil pensar en una sala de equipos o servidores. No
+                        obstante, existen soluciones adecuadas para iniciarse en este ámbito.</td>
+                </tr>
+                <tr>
+                    <td>Facilita y simplifica el despliegue de recursos y aplicaciones. Reduce o elimina los tiempos
+                        de
+                        inactividad.</td>
+                    <td>Dentro de las máquinas virtuales, es crucial no sobrecargar un servidor con demasiadas
+                        instancias. Es importante considerar las características del hardware físico para obtener un
+                        rendimiento óptimo.</td>
+                </tr>
+                <tr>
+                    <td>Proxmox reduce los costes fijos y los gastos operativos.</td>
+                    <td>Aunque cuenta con una interfaz web intuitiva, requiere conocimientos avanzados de
+                        <strong>Linux</strong> y <strong>virtualización</strong> para configuraciones complejas.
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+
+        <h3 id="3-funcionamiento">3. Funcionamiento</h3>
+        <h4 id="pfsense">PFSense</h4>
+        <p>PFSense es un <strong>firewall</strong> y <strong>router</strong> de código abierto basado en FreeBSD,
+            ampliamente utilizado para la gestión de redes en entornos virtualizados. Su integración con Proxmox
+            permite:</p>
+        <ul>
+            <li><strong>Implementación de firewalls</strong> avanzados dentro de máquinas virtuales.</li>
+            <li><strong>Gestión del tráfico</strong> de red en entornos corporativos.</li>
+            <li><strong>Creación de VPNs</strong> seguras para accesos remotos.</li>
+            <li><strong>Control de ancho</strong> de banda y filtrado de contenido.</li><br>
+        </ul>
+        <h4 id="instalaci-n-de-pfsense">Instalación de PFSense</h4>
+        <ol>
+            <li><strong>Descargar pfSense</strong>: Ve a la página oficial de pfSense y descarga el archivo ISO para tu
+                arquitectura (usualmente <code>amd64</code>).</li>
+            <li><strong>Crear medio de instalación</strong>: Usa herramientas como <strong>Rufus</strong> para grabar la
+                ISO en un USB o CD/DVD.</li>
+            <li><strong>Arrancar desde el medio de instalación</strong>: Conecta el USB o CD al equipo, arranca desde él
+                y sigue las instrucciones de instalación. </li>
+            <li><strong>Instalar pfSense</strong>: Selecciona el disco donde deseas instalar pfSense y confirma la
+                instalación. Reinicia cuando termine.</li>
+            <li><strong>Configurar pfSense</strong>: Conecta una computadora a la interfaz LAN, ingresa a
+                <strong>192.168.1.1</strong> desde un navegador y usa el usuario <strong>admin</strong> y la contraseña
+                <strong>pfsense</strong>.
+            </li>
+            <li><strong>Configuración inicial</strong>: Sigue el asistente para configurar las interfaces de red y
+                ajustes básicos como IP, DNS y zona horaria.</li>
+        </ol>
+        <h4 id="configuraci-n">Configuración</h4>
+        <p><strong>Configurar WAN</strong></p>
+        <ol>
+            <li>Accede a <strong>Interfaces</strong> &gt; <strong>WAN</strong>.</li>
+            <li>Si tu ISP da <strong>IP dinámica</strong>, selecciona <strong>DHCP</strong>. Si es
+                <strong>estática</strong>, selecciona <strong>Static IP</strong> y configura la IP proporcionada.
+            </li>
+            <li>Guarda los cambios.</li>
+            <img src="../imagenes/1wan.png" alt="WAN" width="750" height="450">
+            <img src="../imagenes/2wan.png" alt="WAN" width="750" height="450">
+        </ol>
+        <p><strong>Configurar LAN</strong></p>
+        <ol>
+            <li>Accede a <strong>Interfaces</strong> &gt; <strong>LAN</strong>.</li>
+            <li>Asigna una <strong>IP estática</strong> para la LAN (ej. <code>192.168.1.1</code>). </li>
+            <li>Habilita la interfaz LAN y guarda los cambios.</li>
+            <img src="../imagenes/1lan.png" alt="LAN" width="750" height="450">
+            <img src="../imagenes/2lan.png" alt="LAN" width="750" height="450">
+        </ol>
+        <p><strong>Configurar el Servidor DHCP</strong></p>
+        <ol>
+            <li>Ve a <strong>Services</strong> &gt; <strong>DHCP Server</strong>.</li>
+            <li>Habilita el servidor DHCP para la interfaz <strong>LAN</strong>.</li>
+            <li>Define un <strong>rango de IPs</strong> (ej. <code>192.168.1.100</code> a <code>192.168.1.200</code>).
+            </li>
+            <li>Guarda los cambios.</li>
+            <img src="../imagenes/1dhcp.png" alt="DHCP" width="750" height="450">
+            <img src="../imagenes/2dhcp.png" alt="DHCP" width="750" height="450">
+            <img src="../imagenes/3dhcp.png" alt="DHCP" width="750" height="450">
+            <img src="../imagenes/4dhcp.png" alt="DHCP" width="750" height="450">
+        </ol>
+        <p><strong>Configurar el Firewall</strong></p>
+        <ol>
+            <li>Ve a <strong>Firewall</strong> &gt; <strong>Rules</strong>. </li>
+            <li>En la interfaz <strong>LAN</strong>, agrega una regla para permitir tráfico de LAN a WAN (acción:
+                <strong>Pass</strong>).
+            </li>
+            <li>En la interfaz <strong>WAN</strong>, generalmente no se necesitan reglas adicionales. <ul>
+                    <li>Aplica los cambios.</li>
+                    <img src="../imagenes/1fw.png" alt="FireWall" width="750" height="450">
+                    <img src="../imagenes/2fw.png" alt="FireWall" width="750" height="450">
+                    <img src="../imagenes/3fw.png" alt="FireWall" width="750" height="450">
+                    <img src="../imagenes/4fw.png" alt="FireWall" width="750" height="450">
+                </ul>
+            </li>
+        </ol>
+        <p><strong>Verificar</strong></p>
+        <ol>
+            <li>Conecta un dispositivo a la LAN y verifica que obtenga una IP del rango DHCP y pueda acceder a Internet.
+            </li>
+        </ol>
+
+        <h4 id="proxmox-ve">Proxmox VE</h3>
+            <p>Proxmox VE es una plataforma de <strong>virtualización de código abierto</strong>, que combina
+                <strong>KVM</strong> y <strong>LXC</strong> para ofrecer una solución integral de administración
+                de máquinas virtuales y contenedores. Entre sus funcionalidades destacan:
+            </p>
+            <ul>
+                <li><strong>Gestión centralizada</strong> mediante clústeres de Proxmox.</li>
+                <li><strong>Snapshots y backups</strong> eficientes.</li>
+                <li><strong>Alta disponibilidad (HA)</strong> para entornos críticos.</li>
+                <li><strong>Ceph y ZFS</strong> como opciones avanzadas de almacenamiento distribuido.</li><br>
+            </ul>
+            <p>La instalación de Proxmox VE es un proceso relativamente sencillo. Se deben seguir los siguientes
+                pasos:</p>
+            <ol>
+                <li>Descargar la ISO de <strong>Proxmox VE</strong> desde el <a
+                        href="https://www.proxmox.com/en/downloads">sitio oficial</a>.</li>
+                <li>Crear un medio de instalación (USB o DVD) y configurar el BIOS para arrancar desde él.</li>
+                <li>Seguir las instrucciones del asistente de instalación.</li>
+                <li>Configurar la red y la interfaz web de administración.</li>
+                <li>Realizar actualizaciones y ajustes según las necesidades del sistema.</li>
+            </ol>
+
+            <h4 id="proxmox-bs">Proxmox BS</h4>
+            <p>Proxmox BS es una solución de respaldo empresarial diseñada, para <strong>máquinas virtuales,
+                    contenedores y hosts físicos.</strong> Ofrece
+                copias de seguridad incrementales y deduplicadas, lo que reduce la carga de red y el espacio de
+                almacenamiento. Gracias a sus potentes
+                <strong>métodos de cifrado e integridad,</strong> garantiza la seguriada de los datos incluso en
+                destinos no confiables. Entre sus funcionalidades destacan:
+            </p>
+            <p>Debido al presupuesto, nuestro PBS se encuentra dentro de PVE, pero en el futuro tendremos un
+                servidor
+                dedicado para PBS.
+            </p>
+            <ul>
+            </ul>
+            <h4 id="ventajas">Ventajas</h4>
+            <ul>
+                <li><strong>Backups incrementales,</strong> que solo guardan los cambios desde la última copia.
+                </li>
+                <li><strong>Deduplicación de datos,</strong> que evita almacenar información duplciada.</li>
+                <li><strong>Compresión,</strong> que reduce el espacio encesario para los backups.</li>
+            </ul>
+            <h4 id="instalaci-n-de-proxmox-bs">Instalación de Proxmox BS</h4>
+            <ol>
+                <li><strong>Descargar la ISO</strong>: Obtenga la iamgen ISO de Proxmox Backup Server y cópiela
+                    en una
+                    unidad USB o CD/DVD. <a
+                        href="https://www.proxmox.com/en/downloads/proxmox-backup-server/iso">Descargar
+                        aquí</a>.</li>
+                <li><strong>Arrancar desde USB</strong>: Inicie el sistema desde la unidad USB y pulse
+                    &quot;Intro&quot;
+                    para comenzar la instalación. </li>
+                <li><strong>Configuración via web</strong>: Administre todo desde su navegador sin necesidad de
+                    herramientas
+                    adicionales.</li>
+            </ol>
+            <h4 id="configuraci-n-de-backup-encriptado">Configuración de Backup Encriptado</h4>
+            <img src="../imagenes/1.png" alt="Encriptado" width="750" height="450">
+            <img src="../imagenes/2.png" alt="Encriptado" width="750" height="450">
+            <img src="../imagenes/3.png" alt="Encriptado" width="750" height="450">
+            <img src="../imagenes/4.png" alt="Encriptado" width="750" height="450">
+            <br>
+
+            <h2 id="4-documentaci-n-del-bot-de-telegram-con-google-apps-script">4. Documentación del Bot de Telegram con
+                Google Apps Script</h2>
+            <h4 id="-descripci-n-general">Descripción General</h4>
+            <p>Este bot de Telegram, llamado Marcos, está diseñado para asistir a los usuarios con consultas comunes y
+                para derivar solicitudes de contacto a un equipo humano. Las respuestas se registran automáticamente en
+                una hoja de cálculo de Google Sheets para su seguimiento. Además, se envía un correo cuando se solicita
+                asistencia.</p>
+            <h4 id="-tecnolog-as-utilizadas">Tecnologías Utilizadas</h4>
+            <ul>
+                <li>Telegram Bot API (creado con BotFather) </li>
+                <li>Google Apps Script </li>
+                <li>Google Sheets </li>
+                <li>MailApp (Gmail) </li>
+            </ul>
+            <h4 id="-url-del-script-webhook-">URL del Script (Webhook)</h4>
+            <p>plaintext</p>
+               <p>CopiarEditar</p>
+            <p>  
+               <a
+                    href="https://script.google.com/macros/s/AKfycbyFBJYvbOJlyX4cIKRT6GTibbACInMn99PhaD4qItVrEoQncXVRZKCIAFOQJeA19_N3/exec">https://script.google.com/macros/s/AKfycbyFBJYvbOJlyX4cIKRT6GTibbACInMn99PhaD4qItVrEoQncXVRZKCIAFOQJeA19_N3/exec</a>
+            </p>
+            <h4 id="-comandos-disponibles">Comandos Disponibles</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Comando</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>/start</td>
+                        <td>Muestra el mensaje de bienvenida y el menú de opciones</td>
+                    </tr>
+                    <tr>
+                        <td>/contacto</td>
+                        <td>Solicita ayuda de un asistente y genera un correo automático</td>
+                    </tr>
+                    <tr>
+                        <td>/faq</td>
+                        <td>Muestra preguntas frecuentes y sus respuestas</td>
+                    </tr>
+                    <tr>
+                        <td>/exit</td>
+                        <td>Finaliza la conversación</td>
+                    </tr>
+                    <tr>
+                        <td>Otro</td>
+                        <td>Devuelve un mensaje de error si el comando no está reconocido</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4 id="-l-gica-del-bot-apps-script-">Lógica del Bot (Apps Script)</h4>
+            <h4 id="1-inicializaci-n">1. Inicialización</h4>
+            <ul>
+                <li>Se define el token del bot y la URL del webhook. </li>
+                <li>Se establece un diccionario de comandos (command) con las respuestas automáticas. </li>
+            </ul>
+            <h4 id="2-webhook-setup">2. Webhook Setup</h4>
+            <p>js
+                CopiarEditar
+                <code>function setWebhook(){
+                var url = apiUrl + &quot;/setwebhook?url=&quot;+appUrl;
+                UrlFetchApp.fetch(url).getContentText();
+                }</code>
+            </p>
+            <h4 id="3-manejo-de-mensajes-post-">3. Manejo de Mensajes (POST)</h4>
+            <p>Cuando un usuario escribe en el bot:</p>
+            <ul>
+                <li>Se extrae el userID, nombre, mensaje y fecha. </li>
+                <li>Se registra el mensaje en un Google Sheet. </li>
+                <li>Si el usuario escribe /contacto, se dispara una función para enviar un correo. </li>
+                <li>Se genera la respuesta automática en función del comando recibido. </li>
+            </ul>
+            <p>js
+                CopiarEditar</p>
+            <p><code>function doPost(e) {
+            var webhookData = JSON.parse(e.postData.contents);
+            ...
+            sheet.appendRow([from, username, text, date]);
+            if (text === &quot;/contacto&quot;) {
+            sendEmail();
+            }
+            ...
+            UrlFetchApp.fetch(url, opts).getContentText();
+            }</code></p>
+            <h4 id="4-guardar-en-google-sheets">4. Guardar en Google Sheets</h4>
+            <p>Los mensajes se guardan en la hoja:
+                less</p>
+            <p>CopiarEditar </p>
+            <ul>
+                <li>ID del Usuario </li>
+                <li>Nombre </li>
+                <li>Mensaje </li>
+                <li>Fecha </li>
+            </ul>
+            <h4 id="5-correo-autom-tico">5. Correo Automático</h4>
+            <p>Se envía un correo cuando un usuario escribe /contacto:
+                js</p>
+            <p>CopiarEditar</p>
+            <p><code>function sendEmail() {
+            var email = &quot;ilozano@institutmvm.cat&quot;;
+            var subject = &quot;Solicitud de contacto desde el bot de Telegram&quot;;
+            var body = &quot;Una persona ha solicitado ayuda a través del bot de Telegram.&quot;;
+            MailApp.sendEmail(email, subject, body);
+            }</code></p>
+            <h2 id="-despliegue-y-pruebas">Despliegue y Pruebas</h2>
+            <ol>
+                <li>Ir a Deploy &gt; Manage deployments en el entorno de Google Apps Script. </li>
+                <li>Crear un nuevo despliegue tipo Web app.
+                    <pre><code>  -<span class="ruby">    Ejecutar <span class="hljs-symbol">como:</span> Yo 
+            </span>  -<span class="ruby">    Quién tiene <span class="hljs-symbol">acceso:</span> Cualquiera, incluso anónimo  </span>
+            </code></pre>
+                </li>
+                <li>Copiar la URL generada y establecerla como webhook con la función setWebhook(). </li>
+                <li>Probar el bot enviando /start desde Telegram. </li>
+            </ol>
+            <h2 id="-seguridad">Seguridad</h2>
+            <ul>
+                <li>Solo se responde a comandos conocidos. </li>
+                <li>Se limita el método GET para evitar accesos no deseados:<br>js</li>
+            </ul>
+            <p>CopiarEditar
+                <code>function doGet(e){
+return ContentService.createTextOutput(&quot;Método GET no permitido&quot;);
+}</code>
+            </p>
+
+
+            <h3 id="5-hardware-compatible">5. Hardware Compatible</h3>
+            <p>Para una implementación óptima de <strong>Proxmox VE</strong>, se recomienda el siguiente
+                hardware:</p>
+            <ul>
+                <li><strong>Procesador</strong>: Intel 64 o AMD64 con soporte para virtualización (Intel
+                    VT-x/AMD-V).
+                </li>
+                <li><strong>Memoria RAM</strong>: Mínimo <strong>2 GB</strong> para el sistema y servicios de
+                    Proxmox
+                    VE,
+                    más RAM adicional según las máquinas virtuales. Para <strong>Ceph</strong> o
+                    <strong>ZFS</strong>,
+                    se
+                    recomienda <strong>1 GB extra por cada TB de almacenamiento</strong>.
+                </li>
+                <li><strong>Almacenamiento</strong>: Se recomienda <strong>SSD</strong> para mejor rendimiento y
+                    redundancia.</li>
+                <li><strong>Almacenamiento del sistema operativo</strong>: RAID por hardware con
+                    <strong>BBU</strong>
+                    (Battery Backup Unit) o <strong>ZFS</strong> sin RAID.
+                </li>
+                <li><strong>Almacenamiento de máquinas virtuales</strong>: RAID por hardware con BBU o sin RAID
+                    con
+                    <strong>ZFS</strong>. Ni <strong>ZFS</strong> ni <strong>Ceph</strong> son compatibles con
+                    controladores
+                    RAID por hardware. También se puede usar almacenamiento compartido o distribuido.
+                </li>
+                <li><strong>Red</strong>: Interfaces de red <strong>Gigabit</strong> redundantes, con opción a
+                    <strong>10
+                        Gbit</strong> o superior según el clúster y la tecnología de almacenamiento.
+                </li>
+                <li><strong>Passthrough PCI(e)</strong>: Se requiere una CPU con soporte para
+                    <strong>VT-d</strong> o
+                    <strong>AMD-d</strong>.
+                </li>
+            </ul><br>
+
+            <h3 id="6-webgrafía">6. Webgrafía</h3>
+            <ol>
+                <li><a
+                        href="https://its.utu.edu.uy/wp-content/uploads/sites/33/2024/07/MANUAL-DE-USUARIO-DEL-SERVIDOR-PROXMOX.pdf">Manual
+                        de Usuario del Servidor Proxmox</a></li>
+                <li><a href="https://www.proxmox.com">Sitio Oficial de Proxmox</a></li>
+                <li><a href="https://docs.netgate.com/pfsense/en/latest/">Documentación de PFSense</a></li>
+            </ol>
+    </div>
+
+    <footer>
+        <div class="separator"></div>
+    </footer>
+</body>
+
+</html>

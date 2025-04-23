@@ -82,33 +82,6 @@ hr {
     color: #1b1b57; 
 }
 
-.title1 {
-    font-family: 'verdana', 'sans-seriff';
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    gap: 20px; 
-}
-
-.title2 {
-    font-family: 'verdana', 'sans-seriff';
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center; 
-    justify-content: center; 
-    gap: 20px; 
-}
-
-.info1 {
-    max-width: 50%;
-    color: #3a3a72; 
-}
-
-.info2 {
-    max-width: 50%;
-    color: #3a3a72; 
-}
-
 .scale-image {
     width: auto;
     height: auto;

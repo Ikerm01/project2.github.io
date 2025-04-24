@@ -92,6 +92,16 @@ hr {
     color: rgb(58, 58, 114); 
 }
 
+.read-button {
+    padding: 10px 20px;
+    background-color: #4294ec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .scale-image {
     width: auto;
     height: auto;

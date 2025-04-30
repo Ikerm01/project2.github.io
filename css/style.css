@@ -53,21 +53,31 @@ body {
     overflow-y: auto;
 }
 
-.sidebar h2, .sidebar2 h2 {
+.sidebar3 {
+    width: 15%;
+    background-color: #e9e9e9;
+    padding: 10px;
+    height: 130vh;
+    position: absolute;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar h2, .sidebar2 h2, .sidebar3 h2 {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.sidebar ul, .sidebar2 ul {
+.sidebar ul, .sidebar2 ul, .sidebar3 ul {
     list-style: none;
     padding: 0;
 }
 
-.sidebar ul li, .sidebar2 ul li{
+.sidebar ul li, .sidebar2 ul li, .sidebar3 ul li{
     margin: 10px 0;
 }
 
-.sidebar ul li a, .sidebar2 ul li a {
+.sidebar ul li a, .sidebar2 ul li a, .sidebar3 ul li a{
     text-decoration: none;
     color: #5656ac;
     font-weight: bold;

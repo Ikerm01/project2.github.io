@@ -42,7 +42,8 @@
             <li><a href="#pfsense">PFSense</a></li>
             <li><a href="#proxmox-ve">Proxmox VE</a></li>
             <li><a href="#proxmox-bs">Proxmox BS</a></li>
-            <li><a href="#4-documentaci-n-del-bot-de-telegram-con-google-apps-script">Documentacion del Bot de Telegram</a></li>
+            <li><a href="#4-documentaci-n-del-bot-de-telegram-con-google-apps-script">Documentacion del Bot de
+                    Telegram</a></li>
             <li><a href="#5-hardware-compatible">Hardware Compatible</a></li>
             <li><a href="#6-webgrafía">Webgrafía</a></li>
         </ul>
@@ -248,9 +249,9 @@
             </ul>
             <h4 id="-url-del-script-webhook-">URL del Script (Webhook)</h4>
             <p>plaintext</p>
-               <p>CopiarEditar</p>
-            <p>  
-               <a
+            <p>CopiarEditar</p>
+            <p>
+                <a
                     href="https://script.google.com/macros/s/AKfycbyFBJYvbOJlyX4cIKRT6GTibbACInMn99PhaD4qItVrEoQncXVRZKCIAFOQJeA19_N3/exec">https://script.google.com/macros/s/AKfycbyFBJYvbOJlyX4cIKRT6GTibbACInMn99PhaD4qItVrEoQncXVRZKCIAFOQJeA19_N3/exec</a>
             </p>
             <h4 id="-comandos-disponibles">Comandos Disponibles</h4>
@@ -359,6 +360,148 @@
 return ContentService.createTextOutput(&quot;Método GET no permitido&quot;);
 }</code>
             </p>
+            <p>Un resumen rápido: este script automatiza la instalación de Guacamole Server (guacd), la configuración de
+                Apache Tomcat 9, la implementación del cliente web (WAR) y la autenticación JDBC con MariaDB/MySQL,
+                creando además los servicios systemd necesarios y limpiando los archivos temporales al finalizar.
+                Contenido</p>
+            <pre><code><span class="hljs-number">1.</span> Requisitos previos
+                
+                <span class="hljs-number">2.</span> Obtención y ejecución del script
+                
+                <span class="hljs-number">3.</span> Desglose paso a paso
+                
+                    <span class="hljs-number">3.1</span> Instalación de dependencias
+                
+                    <span class="hljs-number">3.2</span> Configuración de Apache Tomcat <span class="hljs-number">9</span>
+                
+                    <span class="hljs-number">3.3</span> Compilación e instalación de Guacamole Server
+                
+                    <span class="hljs-number">3.4</span> Despliegue del cliente web
+                
+                    <span class="hljs-number">3.5</span> Configuración de autenticación JDBC
+                
+                    <span class="hljs-number">3.6</span> Servicios systemd
+                
+                <span class="hljs-number">4.</span> Post-instalación y personalización
+                
+                <span class="hljs-number">5.</span> Limpieza final
+                
+                <span class="hljs-number">6.</span> Referencias
+                </code></pre>
+            <ol>
+                <li>
+                    <p>Requisitos previos</p>
+                    <p> Proxmox VE 8.x (o superior) en un contenedor LXC o VM Debian/Ubuntu.
+                        community-scripts.github.io</p>
+                    <p> Acceso root o usuario con sudo sin contraseña.
+                        community-scripts.github.io</p>
+                    <p> Conectividad a Internet para descargar paquetes y código fuente.</p>
+                </li>
+                <li>
+                    <p>Obtención y ejecución del script</p>
+                </li>
+            </ol>
+            <p>Descarga y ejecuta el instalador directamente desde GitHub:</p>
+            <p>curl -fsSL <a
+                    href="https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/apache-guacamole-install.sh">https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/apache-guacamole-install.sh</a>
+                | bash</p>
+            <p>Este comando lee y ejecuta el script ubicado en el repositorio oficial de Proxmox VE Helper-Scripts
+                community-scripts.github.io
+                .</p>
+            <pre><code><span class="hljs-built_in">T</span><span class="hljs-symbol">ip:</span> Para mayor control, clona el repositorio, ajusta variables (versió<span class="hljs-built_in">n</span> de Guacamole, rutas), y ejecútalo localmente.
+                </code></pre>
+            <ol>
+                <li>Desglose paso a paso
+                    3.1 Instalación de dependencias</li>
+            </ol>
+            <p>Se instalan todos los paquetes necesarios para compilar guacamole-server y soportar RDP/VNC/SSH:</p>
+            <p>apt-get update
+                apt-get install -y build-essential libcairo2-dev libpng-dev \
+                libossp-uuid-dev libvncserver-dev freerdp2-dev libssh2-1-dev \
+                libtelnet-dev libwebsockets-dev libpulse-dev libvorbis-dev \
+                libwebp-dev libssl-dev libpango1.0-dev libswscale-dev \
+                libavcodec-dev libavutil-dev libavformat-dev \
+                default-jdk mariadb-server</p>
+            <p>Estas mismas librerías se mencionan en la documentación oficial de Guacamole .</p>
+            <p>3.2 Configuración de Apache Tomcat 9</p>
+            <pre><code>Descarga automática <span class="hljs-keyword">de</span> <span class="hljs-keyword">la</span> última Tomcat 9 desde mirrors <span class="hljs-keyword">de</span> Apache.
+
+Extracció<span class="hljs-keyword">n</span> <span class="hljs-keyword">en</span> /opt/apache-guacamole/tomcat9 y creació<span class="hljs-keyword">n</span> del usuario <span class="hljs-keyword">de</span> sistema tomcat.
+
+Ajuste <span class="hljs-keyword">de</span> permisos <span class="hljs-keyword">en</span> <span class="hljs-keyword">conf</span>/ para asegurar <span class="hljs-keyword">que</span> sólo root y tomcat puedan leer <span class="hljs-keyword">la</span> configuració<span class="hljs-keyword">n</span>.
+</code></pre>
+            <p>3.3 Compilación e instalación de Guacamole Server</p>
+            <pre><code>Obtiene <span class="hljs-keyword">el</span> último <span class="hljs-keyword">tag</span> de apache/guacamole-server.
+
+Compila <span class="hljs-keyword">e</span> instala <span class="hljs-keyword">con</span>:
+
+<span class="hljs-keyword">cd</span> guacamole-server-&lt;versión&gt;
+autoreconf -fi
+./configure --with-init-dir=/etc/init.d --enable-allow-freerdp-snapshots
+<span class="hljs-keyword">make</span> &amp;&amp; <span class="hljs-keyword">make</span> install &amp;&amp; ldconfig
+
+Esto crea guacd, <span class="hljs-keyword">el</span> demonio de multiplexación de conexiones RDP/VNC/SSH .
+</code></pre>
+            <p>3.4 Despliegue del cliente web</p>
+            <pre><code>Descarga <span class="hljs-selector-tag">del</span> guacamole-&lt;versión&gt;<span class="hljs-selector-class">.war</span> desde los mirrors de Apache.
+
+Copia <span class="hljs-selector-tag">a</span> /opt/apache-guacamole/tomcat9/webapps/guacamole<span class="hljs-selector-class">.war</span>.
+
+Acceso al cliente en http:<span class="hljs-comment">//&lt;IP-del-nodo&gt;:8080/guacamole.</span>
+</code></pre>
+            <p>3.5 Configuración de autenticación JDBC</p>
+            <pre><code>Descarga <span class="hljs-keyword">de</span> MySQL Connector/J y Guacamole JDBC <span class="hljs-keyword">plugin</span>.
+
+Ubicació<span class="hljs-keyword">n</span> <span class="hljs-keyword">de</span> los JAR <span class="hljs-keyword">en</span> /etc/guacamole/lib/ y /etc/guacamole/extensions/.
+
+Creació<span class="hljs-keyword">n</span> <span class="hljs-keyword">de</span> <span class="hljs-keyword">la</span> base <span class="hljs-keyword">de</span> datos y usuario <span class="hljs-keyword">en</span> MariaDB/MySQL:
+
+CREATE DATABASE guacamole_db;
+CREATE USER 'guacamole_user'@'localhost' IDENTIFIED <span class="hljs-keyword">BY</span> '&lt;contraseña_aleatoria&gt;';
+GRANT ALL PRIVILEGES <span class="hljs-keyword">ON</span> guacamole_db.* TO 'guacamole_user'@'localhost';
+FLUSH PRIVILEGES;
+
+Importació<span class="hljs-keyword">n</span> del esquema SQL (*.sql) <span class="hljs-keyword">en</span> guacamole_db.
+
+Generació<span class="hljs-keyword">n</span> <span class="hljs-keyword">de</span> /etc/guacamole/guacamole.properties con los parámetros <span class="hljs-keyword">de</span> conexió<span class="hljs-keyword">n</span>.
+</code></pre>
+            <p>3.6 Servicios systemd</p>
+            <p>Se crean y habilitan dos unidades:</p>
+            <pre><code>guacd<span class="hljs-selector-class">.service</span> que gestiona el demonio guacd.
+
+tomcat<span class="hljs-selector-class">.service</span> para arrancar Tomcat con CATALINA_HOME=/opt/apache-guacamole/tomcat9.
+</code></pre>
+            <p>Ambos servicios, junto a MariaDB, se inician automáticamente al arranque .</p>
+            <ol>
+                <li>
+                    <p>Post-instalación y personalización</p>
+                    <p> Credenciales: revisa el fichero ~/guacamole.creds para usuario, contraseña y DB.</p>
+                    <p> Firewall: abre los puertos 4822 (guacd) y 8080 (Tomcat).
+                        GitHub</p>
+                    <p> HTTPS: en producción, usa un proxy inverso (nginx/Traefik) con certificado TLS.
+                        community-scripts.github.io</p>
+                    <p> Backups: respalda /etc/guacamole/ y la base de datos periódicamente.</p>
+                </li>
+                <li>
+                    <p>Limpieza final</p>
+                </li>
+            </ol>
+            <p>El script elimina archivos temporales (*.tar.gz, carpetas de compilación) y ejecuta apt autoremove y apt
+                autoclean para liberar espacio .</p>
+            <ol>
+                <li>
+                    <p>Referencias</p>
+                    <p> Script apache-guacamole-install.sh – Proxmox VE Helper-Scripts (Community)
+                        community-scripts.github.io</p>
+                    <p> Proxmox VE Helper-Scripts – Página oficial de la comunidad de scripts.
+                        community-scripts.github.io</p>
+                    <p> Guacamole Installing Guide – Documentación oficial Apache Guacamole.</p>
+                    <p> Issue: guacd sólo escucha IPv6 – Detalle de puerto y binding en el script.
+                        GitHub</p>
+                    <p> Cambio en guacd service – Corrección de inicio en release 2024-12-31.</p>
+                </li>
+            </ol>
+
 
 
             <h3 id="5-hardware-compatible">5. Hardware Compatible</h3>
@@ -411,18 +554,18 @@ return ContentService.createTextOutput(&quot;Método GET no permitido&quot;);
     <footer>
         <div class="separator"></div>
         <div class="footer-width-fixer"></div>
-            <div class="footer-links">
-                <a href="#">Términos y condiciones</a>
-                <span class="divider">|</span>
-                <a href="Html/politica_privacidad.html">Políticas de Privacidad</a>
-                <span class="divider">|</span>
-                <a href="#">Políticas de Cookies</a>
-                <span class="divider">|</span>
-                <a href="#">Aviso Legal</a>
-            </div>
-            <div class="footer-copyright">
-                <p>Copyright © 2025 TECHSYS - Todos los derechos reservados</p>
-            </div>
+        <div class="footer-links">
+            <a href="#">Términos y condiciones</a>
+            <span class="divider">|</span>
+            <a href="Html/politica_privacidad.html">Políticas de Privacidad</a>
+            <span class="divider">|</span>
+            <a href="#">Políticas de Cookies</a>
+            <span class="divider">|</span>
+            <a href="#">Aviso Legal</a>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright © 2025 TECHSYS - Todos los derechos reservados</p>
+        </div>
         </div>
     </footer>
 </body>

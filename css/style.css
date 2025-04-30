@@ -63,12 +63,12 @@ body {
     overflow-y: auto;
 }
 
-.sidebar h2, .sidebar2 h2, .sidebar3 h2 {
+.sidebar h2, .sidebar2 h2, .sidebar3 h2{
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.sidebar ul, .sidebar2 ul, .sidebar3 ul {
+.sidebar ul, .sidebar2 ul, .sidebar3 ul{
     list-style: none;
     padding: 0;
 }

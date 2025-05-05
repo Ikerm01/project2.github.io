@@ -51,6 +51,7 @@
             <li><a href="#vpn">VPN</a></li>
             <li><a href="#monitorizaci-n-con-prometheus-node-exporter-grafana">Monitorización con Prometheus + Node
                     Exporter + Grafana</a></li>
+            <li><a href="#roles-de-proxmox">Roles de Proxmox</a></li>
             <li><a href="#5-hardware-compatible">5.Hardware Compatible</a></li>
             <li><a href="#6-webgrafía">6.Webgrafía</a></li>
         </ul>
@@ -922,6 +923,107 @@ tomcat<span class="hljs-selector-class">.service</span> para arrancar Tomcat con
             <ul>
                 <li>Filesystem Usage: Espacio usado por las particiones del sistema.</li>
             </ul>
+
+            <h3 id="roles-de-proxmox">Roles de Proxmox</h3>
+            <h3 id="rol-de-alumno">Rol de alumno</h3>
+            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeNL6CRhhZ3u2_CSmGZwT46HGBwMPXO25jSW92SuSU0Whi3k3nCJ_3ZK2B8SBzoMx5n9MnINItc17QT2lO5jlpSuL2M1gS0vv4LpVmz761YlyAj6-4I0aMGh_7N0L5wHTXsInA2Ag?key=WDvmN8vPYcU6kwrHqV-tBhuD"
+                    alt=""></p>
+            <h3 id="1-datastore-allocatetemplate">1. Datastore.AllocateTemplate</h3>
+            <p>Permite crear plantillas de máquina virtual (VM Templates) en un datastore. Esto es para la clonación o
+                despliegue rápido de VMs.</p>
+            <h3 id="2-vm-audit">2. VM.Audit</h3>
+            <p>Permite ver detalles y configuración de las máquinas virtuales, sin modificarlas. Es un rol de solo
+                lectura orientado a auditorías.</p>
+            <h3 id="3-vm-console">3. VM.Console</h3>
+            <p>Permite acceder a la consola remota de una máquina virtual, como si estuvieras físicamente frente a la
+                pantalla del sistema invitado (guest OS).</p>
+            <h3 id="4-vm-allocate">4. VM.Allocate</h3>
+            <p>Permite crear nuevas máquinas virtuales. Es un permiso base necesario para que un usuario pueda desplegar
+                o registrar nuevas VMs.</p>
+            <h3 id="5-vm-powermgmt">5. VM.PowerMgmt</h3>
+            <p>Permite encender, apagar, reiniciar y suspender máquinas virtuales. Es esencial para la gestión del ciclo
+                de vida de la VM.</p>
+            <h3 id="6-datastore-allocatespace">6. Datastore.AllocateSpace</h3>
+            <p>Permite asignar espacio en un datastore, por ejemplo, al crear discos virtuales (VMDK) para nuevas VMs.
+            </p>
+            <h3 id="7-datastore-allocate">7. Datastore.Allocate</h3>
+            <p>Permite crear y registrar nuevos objetos en un datastore, como máquinas virtuales, archivos ISO o
+                plantillas. Puede solaparse con Datastore.AllocateTemplate pero es más general.</p>
+            <h3 id="rol-de-profesor">Rol de Profesor</h3>
+            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdUaei417bI0p9A_zdcav_FygqwXko3-9D7hb76rZwxNzQows3ylyvUduNmk_Ky_WR4-xzJsKCTCYwWm_lvkFtZ9SK_ks2JdFLe0nT7kYhk6s5pH_a4KjrxVwwj2i7AdHc757y0?key=WDvmN8vPYcU6kwrHqV-tBhuD"
+                    alt=""></p>
+            <ol>
+                <li>VM.Migrate<br>Permite migrar una máquina virtual entre hosts o datastores (por ejemplo, vMotion y
+                    Storage vMotion). </li>
+            </ol>
+            <ol>
+                <li>VM.Allocate<br>Permite crear o registrar nuevas VMs en el entorno. </li>
+            </ol>
+            <ol>
+                <li>VM.Clone<br>Permite clonar una VM existente, ya sea como VM nueva o como plantilla. </li>
+            </ol>
+            <ol>
+                <li>VM.Audit<br>Permite ver detalles y configuración de VMs (modo lectura, sin modificar nada). </li>
+            </ol>
+            <ol>
+                <li>VM.PowerMgmt<br>Permite encender, apagar, reiniciar o suspender una VM. </li>
+            </ol>
+            <ol>
+                <li>VM.Snapshot<br>Permite crear snapshots de una máquina virtual. </li>
+            </ol>
+            <ol>
+                <li>VM.Snapshot.Rollback<br>Permite restaurar una VM a un estado anterior usando un snapshot. </li>
+            </ol>
+            <ol>
+                <li>VM.Console<br>Permite acceder a la consola de la VM, como si usaras un teclado/pantalla
+                    directamente.</li>
+            </ol>
+            <hr>
+            <p>Permisos de Configuración de la VM</p>
+            <ol>
+                <li>VM.Config.CPU<br>Permite cambiar la cantidad de CPUs asignadas a una VM. </li>
+            </ol>
+            <ol>
+                <li>VM.Config.Memory<br>Permite cambiar la cantidad de memoria RAM asignada a una VM. </li>
+            </ol>
+            <ol>
+                <li>VM.Config.Options<br>Permite modificar las opciones avanzadas de configuración de una VM (como flags
+                    o compatibilidad de hardware). </li>
+            </ol>
+            <ol>
+                <li>VM.Config.HWType<br>Permite cambiar el tipo de hardware virtual de la VM (por ejemplo, versión de VM
+                    Hardware 13 a 15). </li>
+            </ol>
+            <ol>
+                <li>VM.Config.Disk<br>Permite añadir, quitar o cambiar discos virtuales (VMDK) en una VM. </li>
+            </ol>
+            <hr>
+            <h3 id="permisos-sobre-datastores">Permisos sobre Datastores</h3>
+            <ol>
+                <li>Datastore.AllocateSpace<br>Permite usar espacio del datastore para cosas como discos virtuales o
+                    snapshots. </li>
+            </ol>
+            <ol>
+                <li>Datastore.Allocate<br>Permite crear o registrar objetos (como VMs o archivos ISO) en el datastore.
+                </li>
+            </ol>
+            <ol>
+                <li>Datastore.Audit<br>Permite ver los contenidos del datastore, como archivos, carpetas, espacio
+                    disponible, etc. </li>
+            </ol>
+            <hr>
+            <h3 id="permisos-sobre-resource-pools">Permisos sobre Resource Pools</h3>
+            <ol>
+                <li>Pool.Allocate<br>Permite crear y asignar recursos en resource pools (CPU y memoria compartida entre
+                    VMs). </li>
+            </ol>
+            <ol>
+                <li>Pool.Audit<br>Permite ver información de los resource pools (modo lectura).</li>
+            </ol>
+            <h3 id="rol-de-admin">Rol de Admin</h3>
+            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXddTJdhJKbHXNZz5jzU0J4k-BqYH1IO2zle07PIAV86aAQlWdMw9Hl9LB-z6UgI0X-2Tc9mbKp4qRsssJ8akrPb5ToOiWI_64qahgMDJBEWhjVWBILuT5k4ugKDi72xV-53WLg1AQ?key=WDvmN8vPYcU6kwrHqV-tBhuD"
+                    alt=""></p>
+            <p>Admin puede hacer todo lo anterior mas otras gestiones de seguridad.</p>
 
             <h3 id="5-hardware-compatible">5. Hardware Compatible</h3>
             <p>Para una implementación óptima de <strong>Proxmox VE</strong>, se recomienda el siguiente

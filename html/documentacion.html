@@ -36,16 +36,16 @@
     <aside class="sidebar">
         <h2>Menú</h2>
         <ul>
-            <li><a href="#documentación-de-proxmox">Introducción</a></li>
-            <li><a href="#2-ventajas-y-desventajas">Ventajas y Desventajas</a></li>
-            <li><a href="#3-funcionamiento">Funcionamiento</a></li>
+            <li><a href="#documentación-de-proxmox">1.Introducción</a></li>
+            <li><a href="#2-ventajas-y-desventajas">2.Ventajas y Desventajas</a></li>
+            <li><a href="#3-funcionamiento">3.Funcionamiento</a></li>
             <li><a href="#pfsense">PFSense</a></li>
             <li><a href="#proxmox-ve">Proxmox VE</a></li>
             <li><a href="#proxmox-bs">Proxmox BS</a></li>
-            <li><a href="#4-documentaci-n-del-bot-de-telegram-con-google-apps-script">Documentacion del Bot de
-                    Telegram</a></li>
-            <li><a href="#5-hardware-compatible">Hardware Compatible</a></li>
-            <li><a href="#6-webgrafía">Webgrafía</a></li>
+            <li><a href="#4-documentaci-n-del-bot-de-telegram-con-google-apps-script">4.Documentacion del Bot de Telegram</a></li>
+            <li><a href="guacamole">Guacamole</a></li>
+            <li><a href="#5-hardware-compatible">5.Hardware Compatible</a></li>
+            <li><a href="#6-webgrafía">6.Webgrafía</a></li>
         </ul>
     </aside>
     <div class="informacion2">
@@ -360,6 +360,7 @@
 return ContentService.createTextOutput(&quot;Método GET no permitido&quot;);
 }</code>
             </p>
+            <h3 id="guacamole">Guacamole</h3>
             <p>Un resumen rápido: este script automatiza la instalación de Guacamole Server (guacd), la configuración de
                 Apache Tomcat 9, la implementación del cliente web (WAR) y la autenticación JDBC con MariaDB/MySQL,
                 creando además los servicios systemd necesarios y limpiando los archivos temporales al finalizar.
@@ -501,8 +502,6 @@ tomcat<span class="hljs-selector-class">.service</span> para arrancar Tomcat con
                     <p> Cambio en guacd service – Corrección de inicio en release 2024-12-31.</p>
                 </li>
             </ol>
-
-
 
             <h3 id="5-hardware-compatible">5. Hardware Compatible</h3>
             <p>Para una implementación óptima de <strong>Proxmox VE</strong>, se recomienda el siguiente

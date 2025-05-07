@@ -48,7 +48,7 @@
             <li><a href="#-l-gica-del-bot-apps-script-">- Lógica del Bot (Apps Script)</a></li>
             <li><a href="#guacamole">- Guacamole</a></li>
             <li><a href="#requisitos-de-la-maquina">- Requisitos de la maquina</li>
-            <li><a href="#vpn">- VPN</a></li>
+            <li><a href="#openvpn">- OPENVPN</a></li>
             <li><a href="#monitorizaci-n-con-prometheus-node-exporter-grafana">- Monitorización con Prometheus + Node
                     Exporter + Grafana</a></li>
             <li><a href="#roles-de-proxmox">- Roles de Proxmox</a></li>
@@ -164,13 +164,13 @@
             </li>
             <li>Guarda los cambios.</li>
             <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcX-1yzjXk3Pb8ORNpLuiTL-E6gkR3vXrrS3gBdcNJOdIg9f92R1y3EVNNLmlP_kEKNkPy3Cn5YTpQQ13gbKcHXr6gW4FZqAyeVhmjgJ2HlX2vU2Zm0GDtopLgaB5lLAnZy67-31w?key=n5Zz2_nBbhiRtzRnN8z2yg"
-                alt="DHCP" width="650" height="450"></p>
+                    alt="DHCP" width="650" height="450"></p>
             <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcwSpXrLs_E2uFiwgSbFvc0Qk-n6HK24M2o6kRFx5e5TfFF9IWikXWMYTh8DULfjrNbbmLjbx5_g2g_5gT6P_1na_w5XVy9pVJR-K70jVAjl7_ArwGomHXCYuyiDz8uhIT06lF2rg?key=n5Zz2_nBbhiRtzRnN8z2yg"
-                alt="DHCP" width="650" height="450"></p>
+                    alt="DHCP" width="650" height="450"></p>
             <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfaZHmnj9McqvNIwAjWkwFcI2dSOuT9MH_AlhjQ47abubwI5fl7qMSp9jibHqwTTdIGr3Z7L9WyXMtAtZHuk4_utZTavQFmWUJMe06NW0KW3dJkxtRFGOtIg1xMo5UKCpUQBog0Hw?key=n5Zz2_nBbhiRtzRnN8z2yg"
-                alt="DHCP" width="650" height="450"></p>
+                    alt="DHCP" width="650" height="450"></p>
             <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeAWU_0J5abvCJReMr6Tw7q3pnxo7jVe5SCfcsUo6bG0zHU-Hd-duuhtG6BV2mDUT5n13njcRAuzuQNoJ8XPzDbeU77iHngaZMBi_Gz_o1qsmxfeN0oW9wMW1ltksN819shox-c?key=n5Zz2_nBbhiRtzRnN8z2yg"
-                alt="DHCP" width="650" height="450"></p>
+                    alt="DHCP" width="650" height="450"></p>
         </ol><br>
 
         <p><strong>Configurar el Firewall</strong></p>
@@ -199,152 +199,151 @@
         </ol><br>
 
         <h3 id="proxmox-ve">Proxmox VE</h3>
-            <p>Proxmox VE es una plataforma de <strong>virtualización de código abierto</strong>, que combina
-                <strong>KVM</strong> y <strong>LXC</strong> para ofrecer una solución integral de administración
-                de máquinas virtuales y contenedores. Entre sus funcionalidades destacan:
-            </p>
-            <ul>
-                <li><strong>Gestión centralizada</strong> mediante clústeres de Proxmox.</li>
-                <li><strong>Snapshots y backups</strong> eficientes.</li>
-                <li><strong>Alta disponibilidad (HA)</strong> para entornos críticos.</li>
-                <li><strong>Ceph y ZFS</strong> como opciones avanzadas de almacenamiento distribuido.</li><br>
-            </ul>
-            <p>La instalación de Proxmox VE es un proceso relativamente sencillo. Se deben seguir los siguientes
-                pasos:</p>
-            <ol>
-                <li>Descargar la ISO de <strong>Proxmox VE</strong> desde el <a
-                        href="https://www.proxmox.com/en/downloads">sitio oficial</a>.</li>
-                <li>Crear un medio de instalación (USB o DVD) y configurar el BIOS para arrancar desde él.</li>
-                <li>Seguir las instrucciones del asistente de instalación.</li>
-                <li>Configurar la red y la interfaz web de administración.</li>
-                <li>Realizar actualizaciones y ajustes según las necesidades del sistema.</li>
-            </ol><br>
+        <p>Proxmox VE es una plataforma de <strong>virtualización de código abierto</strong>, que combina
+            <strong>KVM</strong> y <strong>LXC</strong> para ofrecer una solución integral de administración
+            de máquinas virtuales y contenedores. Entre sus funcionalidades destacan:
+        </p>
+        <ul>
+            <li><strong>Gestión centralizada</strong> mediante clústeres de Proxmox.</li>
+            <li><strong>Snapshots y backups</strong> eficientes.</li>
+            <li><strong>Alta disponibilidad (HA)</strong> para entornos críticos.</li>
+            <li><strong>Ceph y ZFS</strong> como opciones avanzadas de almacenamiento distribuido.</li><br>
+        </ul>
+        <p>La instalación de Proxmox VE es un proceso relativamente sencillo. Se deben seguir los siguientes
+            pasos:</p>
+        <ol>
+            <li>Descargar la ISO de <strong>Proxmox VE</strong> desde el <a
+                    href="https://www.proxmox.com/en/downloads">sitio oficial</a>.</li>
+            <li>Crear un medio de instalación (USB o DVD) y configurar el BIOS para arrancar desde él.</li>
+            <li>Seguir las instrucciones del asistente de instalación.</li>
+            <li>Configurar la red y la interfaz web de administración.</li>
+            <li>Realizar actualizaciones y ajustes según las necesidades del sistema.</li>
+        </ol><br>
 
         <h3 id="proxmox-bs">Proxmox BS</h3>
-            <p>Proxmox BS es una solución de respaldo empresarial diseñada, para <strong>máquinas virtuales,
-                    contenedores y hosts físicos.</strong> Ofrece
-                copias de seguridad incrementales y de duplicadas, lo que reduce la carga de red y el espacio de
-                almacenamiento. Gracias a sus potentes
-                <strong>métodos de cifrado e integridad,</strong> garantiza la seguriada de los datos incluso en
-                destinos no confiables. Entre sus funcionalidades destacan:
-            </p>
-            <p>Debido al presupuesto, nuestro PBS se encuentra dentro de PVE, pero en el futuro tendremos un
-                servidor
-                dedicado para PBS.
-            </p>
-            <ul>
-            </ul>
-            <h4 id="ventajas">Ventajas</h4>
-            <ul>
-                <li><strong>Backups incrementales,</strong> que solo guardan los cambios desde la última copia.
-                </li>
-                <li><strong>De duplicación de datos,</strong> que evita almacenar información duplicada.</li>
-                <li><strong>Compresión,</strong> que reduce el espacio necesario para los backups.</li>
-            </ul>
-            <h4 id="instalaci-n-de-proxmox-bs">Instalación de Proxmox BS</h4>
-            <ol>
-                <li><strong>Descargar la ISO</strong>: Obtenga la imagen ISO de Proxmox Backup Server y cópiela
-                    en una
-                    unidad USB o CD/DVD. <a
-                        href="https://www.proxmox.com/en/downloads/proxmox-backup-server/iso">Descargar
-                        aquí</a>.</li>
-                <li><strong>Arrancar desde USB</strong>: Inicie el sistema desde la unidad USB y pulse
-                    &quot;Intro&quot;
-                    para comenzar la instalación. </li>
-                <li><strong>Configuración via web</strong>: Administre todo desde su navegador sin necesidad de
-                    herramientas
-                    adicionales.</li>
-            </ol><br>
+        <p>Proxmox BS es una solución de respaldo empresarial diseñada, para <strong>máquinas virtuales,
+                contenedores y hosts físicos.</strong> Ofrece
+            copias de seguridad incrementales y de duplicadas, lo que reduce la carga de red y el espacio de
+            almacenamiento. Gracias a sus potentes
+            <strong>métodos de cifrado e integridad,</strong> garantiza la seguriada de los datos incluso en
+            destinos no confiables. Entre sus funcionalidades destacan:
+        </p>
+        <p>Debido al presupuesto, nuestro PBS se encuentra dentro de PVE, pero en el futuro tendremos un
+            servidor
+            dedicado para PBS.
+        </p>
+        <ul>
+        </ul>
+        <h4 id="ventajas">Ventajas</h4>
+        <ul>
+            <li><strong>Backups incrementales,</strong> que solo guardan los cambios desde la última copia.
+            </li>
+            <li><strong>De duplicación de datos,</strong> que evita almacenar información duplicada.</li>
+            <li><strong>Compresión,</strong> que reduce el espacio necesario para los backups.</li>
+        </ul>
+        <h4 id="instalaci-n-de-proxmox-bs">Instalación de Proxmox BS</h4>
+        <ol>
+            <li><strong>Descargar la ISO</strong>: Obtenga la imagen ISO de Proxmox Backup Server y cópiela
+                en una
+                unidad USB o CD/DVD. <a href="https://www.proxmox.com/en/downloads/proxmox-backup-server/iso">Descargar
+                    aquí</a>.</li>
+            <li><strong>Arrancar desde USB</strong>: Inicie el sistema desde la unidad USB y pulse
+                &quot;Intro&quot;
+                para comenzar la instalación. </li>
+            <li><strong>Configuración via web</strong>: Administre todo desde su navegador sin necesidad de
+                herramientas
+                adicionales.</li>
+        </ol><br>
 
         <h3 id="configuraci-n-de-backup-encriptado">Configuración de Backup Encriptado</h3>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf8fYmayKCECv4z-P49pBXA0vq5X_2z5M1z1U7sH-KCJEnZvpgrur2CKw7uBpWQ83TEHcNeJ7E-uq_yF0H0OF9XMedvSQn6ox9_tciWOiOQq14VHFE1IsxaNRyGRvjMcw9m3v1b?key=n5Zz2_nBbhiRtzRnN8z2yg"
-                    alt="Encriptado" width="750" height="450"></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXftRQeeiXIkQ0cE4Z5MuMUJg2UxwFSJtaaGFiX1GnSPAVaek4bGhiiAKzS2s8x71szT2ndH4PBzjm80EtnlyMSzZND52Z-xQyon_RElNDdWmll14mw7ehAXWuY5Hr4OXGls-ERkRA?key=n5Zz2_nBbhiRtzRnN8z2yg"
-                    alt="Encriptado" width="750" height="450"></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdKr4QvtLWEHA1FXWjjRYhxnpU1E2E4UXL8kyVlwOvJtoelmg7jqGTCEAqJEOQqWAaAWOZ03-iKY_OBZ-TM68iDXsq8prq9Mee5H5kFQilkxzzdF6NMUgoK2MIJcM5hJ2WuIzQVkg?key=n5Zz2_nBbhiRtzRnN8z2yg"
-                    alt="Encriptado" width="750" height="450"></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcOnFXfb5EiRG4cEgg4Ci4vgw4DHt7wgOTMFz6UoK7xQ_WdUB3Vy5Cu1rESgIXA1FsqnX5r_yA0mUwMAKXTU3UP3nfPp6ARKbTWNSkyGfkCluDJK1-gajXYK7-1AYDnWOjYoHwnxA?key=n5Zz2_nBbhiRtzRnN8z2yg"
-                    alt="Encriptado" width="750" height="450"></p>
-            <br>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf8fYmayKCECv4z-P49pBXA0vq5X_2z5M1z1U7sH-KCJEnZvpgrur2CKw7uBpWQ83TEHcNeJ7E-uq_yF0H0OF9XMedvSQn6ox9_tciWOiOQq14VHFE1IsxaNRyGRvjMcw9m3v1b?key=n5Zz2_nBbhiRtzRnN8z2yg"
+                alt="Encriptado" width="750" height="450"></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXftRQeeiXIkQ0cE4Z5MuMUJg2UxwFSJtaaGFiX1GnSPAVaek4bGhiiAKzS2s8x71szT2ndH4PBzjm80EtnlyMSzZND52Z-xQyon_RElNDdWmll14mw7ehAXWuY5Hr4OXGls-ERkRA?key=n5Zz2_nBbhiRtzRnN8z2yg"
+                alt="Encriptado" width="750" height="450"></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdKr4QvtLWEHA1FXWjjRYhxnpU1E2E4UXL8kyVlwOvJtoelmg7jqGTCEAqJEOQqWAaAWOZ03-iKY_OBZ-TM68iDXsq8prq9Mee5H5kFQilkxzzdF6NMUgoK2MIJcM5hJ2WuIzQVkg?key=n5Zz2_nBbhiRtzRnN8z2yg"
+                alt="Encriptado" width="750" height="450"></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcOnFXfb5EiRG4cEgg4Ci4vgw4DHt7wgOTMFz6UoK7xQ_WdUB3Vy5Cu1rESgIXA1FsqnX5r_yA0mUwMAKXTU3UP3nfPp6ARKbTWNSkyGfkCluDJK1-gajXYK7-1AYDnWOjYoHwnxA?key=n5Zz2_nBbhiRtzRnN8z2yg"
+                alt="Encriptado" width="750" height="450"></p>
+        <br>
 
-            <h2 id="4-documentaci-n-del-bot-de-telegram-con-google-apps-script">4. Documentación del Bot de Telegram con
-                Google Apps Script</h2>
-            <h4 id="-descripci-n-general">Descripción General</h4>
-            <p>Este bot de Telegram, llamado Marcos, está diseñado para asistir a los usuarios con consultas comunes y
-                para derivar solicitudes de contacto a un equipo humano. Las respuestas se registran automáticamente en
-                una hoja de cálculo de Google Sheets para su seguimiento. Además, se envía un correo cuando se solicita
-                asistencia.</p>
-            <h4 id="-tecnolog-as-utilizadas">Tecnologías Utilizadas</h4>
-            <ul>
-                <li>Telegram Bot API (creado con BotFather) </li>
-                <li>Google Apps Script </li>
-                <li>Google Sheets </li>
-                <li>MailApp (Gmail) </li>
-            </ul>
-            <h4 id="-url-del-script-webhook-">URL del Script (Webhook)</h4>
-            <p>plaintext</p>
-            <p>CopiarEditar</p>
-            <p>
-                <a
-                    href="https://script.google.com/macros/s/AKfycbyFBJYvbOJlyX4cIKRT6GTibbACInMn99PhaD4qItVrEoQncXVRZKCIAFOQJeA19_N3/exec">https://script.google.com/macros/s/AKfycbyFBJYvbOJlyX4cIKRT6GTibbACInMn99PhaD4qItVrEoQncXVRZKCIAFOQJeA19_N3/exec</a>
-            </p>
-            <h4 id="-comandos-disponibles">Comandos Disponibles</h4>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Comando</th>
-                        <th>Descripción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>/start</td>
-                        <td>Muestra el mensaje de bienvenida y el menú de opciones</td>
-                    </tr>
-                    <tr>
-                        <td>/contacto</td>
-                        <td>Solicita ayuda de un asistente y genera un correo automático</td>
-                    </tr>
-                    <tr>
-                        <td>/faq</td>
-                        <td>Muestra preguntas frecuentes y sus respuestas</td>
-                    </tr>
-                    <tr>
-                        <td>/exit</td>
-                        <td>Finaliza la conversación</td>
-                    </tr>
-                    <tr>
-                        <td>Otro</td>
-                        <td>Devuelve un mensaje de error si el comando no está reconocido</td>
-                    </tr>
-                </tbody>
-            </table><br>
+        <h2 id="4-documentaci-n-del-bot-de-telegram-con-google-apps-script">4. Documentación del Bot de Telegram con
+            Google Apps Script</h2>
+        <h4 id="-descripci-n-general">Descripción General</h4>
+        <p>Este bot de Telegram, llamado Marcos, está diseñado para asistir a los usuarios con consultas comunes y
+            para derivar solicitudes de contacto a un equipo humano. Las respuestas se registran automáticamente en
+            una hoja de cálculo de Google Sheets para su seguimiento. Además, se envía un correo cuando se solicita
+            asistencia.</p>
+        <h4 id="-tecnolog-as-utilizadas">Tecnologías Utilizadas</h4>
+        <ul>
+            <li>Telegram Bot API (creado con BotFather) </li>
+            <li>Google Apps Script </li>
+            <li>Google Sheets </li>
+            <li>MailApp (Gmail) </li>
+        </ul>
+        <h4 id="-url-del-script-webhook-">URL del Script (Webhook)</h4>
+        <p>plaintext</p>
+        <p>CopiarEditar</p>
+        <p>
+            <a
+                href="https://script.google.com/macros/s/AKfycbyFBJYvbOJlyX4cIKRT6GTibbACInMn99PhaD4qItVrEoQncXVRZKCIAFOQJeA19_N3/exec">https://script.google.com/macros/s/AKfycbyFBJYvbOJlyX4cIKRT6GTibbACInMn99PhaD4qItVrEoQncXVRZKCIAFOQJeA19_N3/exec</a>
+        </p>
+        <h4 id="-comandos-disponibles">Comandos Disponibles</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Comando</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>/start</td>
+                    <td>Muestra el mensaje de bienvenida y el menú de opciones</td>
+                </tr>
+                <tr>
+                    <td>/contacto</td>
+                    <td>Solicita ayuda de un asistente y genera un correo automático</td>
+                </tr>
+                <tr>
+                    <td>/faq</td>
+                    <td>Muestra preguntas frecuentes y sus respuestas</td>
+                </tr>
+                <tr>
+                    <td>/exit</td>
+                    <td>Finaliza la conversación</td>
+                </tr>
+                <tr>
+                    <td>Otro</td>
+                    <td>Devuelve un mensaje de error si el comando no está reconocido</td>
+                </tr>
+            </tbody>
+        </table><br>
 
-            <h3 id="-l-gica-del-bot-apps-script-">Lógica del Bot (Apps Script)</h3>
-            <h4 id="1-inicializaci-n">1. Inicialización</h4>
-            <ul>
-                <li>Se define el token del bot y la URL del webhook. </li>
-                <li>Se establece un diccionario de comandos (command) con las respuestas automáticas. </li>
-            </ul>
-            <h4 id="2-webhook-setup">2. Webhook Setup</h4>
-            <p>js
-                CopiarEditar
-                <code>function setWebhook(){
+        <h3 id="-l-gica-del-bot-apps-script-">Lógica del Bot (Apps Script)</h3>
+        <h4 id="1-inicializaci-n">1. Inicialización</h4>
+        <ul>
+            <li>Se define el token del bot y la URL del webhook. </li>
+            <li>Se establece un diccionario de comandos (command) con las respuestas automáticas. </li>
+        </ul>
+        <h4 id="2-webhook-setup">2. Webhook Setup</h4>
+        <p>js
+            CopiarEditar
+            <code>function setWebhook(){
                 var url = apiUrl + &quot;/setwebhook?url=&quot;+appUrl;
                 UrlFetchApp.fetch(url).getContentText();
                 }</code>
-            </p>
-            <h4 id="3-manejo-de-mensajes-post-">3. Manejo de Mensajes (POST)</h4>
-            <p>Cuando un usuario escribe en el bot:</p>
-            <ul>
-                <li>Se extrae el userID, nombre, mensaje y fecha. </li>
-                <li>Se registra el mensaje en un Google Sheet. </li>
-                <li>Si el usuario escribe /contacto, se dispara una función para enviar un correo. </li>
-                <li>Se genera la respuesta automática en función del comando recibido. </li>
-            </ul>
-            <p>js
-                CopiarEditar</p>
-            <p><code>function doPost(e) {
+        </p>
+        <h4 id="3-manejo-de-mensajes-post-">3. Manejo de Mensajes (POST)</h4>
+        <p>Cuando un usuario escribe en el bot:</p>
+        <ul>
+            <li>Se extrae el userID, nombre, mensaje y fecha. </li>
+            <li>Se registra el mensaje en un Google Sheet. </li>
+            <li>Si el usuario escribe /contacto, se dispara una función para enviar un correo. </li>
+            <li>Se genera la respuesta automática en función del comando recibido. </li>
+        </ul>
+        <p>js
+            CopiarEditar</p>
+        <p><code>function doPost(e) {
             var webhookData = JSON.parse(e.postData.contents);
             ...
             sheet.appendRow([from, username, text, date]);
@@ -354,59 +353,59 @@
             ...
             UrlFetchApp.fetch(url, opts).getContentText();
             }</code></p>
-            <h4 id="4-guardar-en-google-sheets">4. Guardar en Google Sheets</h4>
-            <p>Los mensajes se guardan en la hoja:
-                less</p>
-            <p>CopiarEditar </p>
-            <ul>
-                <li>ID del Usuario </li>
-                <li>Nombre </li>
-                <li>Mensaje </li>
-                <li>Fecha </li>
-            </ul>
-            <h4 id="5-correo-autom-tico">5. Correo Automático</h4>
-            <p>Se envía un correo cuando un usuario escribe /contacto:
-                js</p>
-            <p>CopiarEditar</p>
-            <p><code>function sendEmail() {
+        <h4 id="4-guardar-en-google-sheets">4. Guardar en Google Sheets</h4>
+        <p>Los mensajes se guardan en la hoja:
+            less</p>
+        <p>CopiarEditar </p>
+        <ul>
+            <li>ID del Usuario </li>
+            <li>Nombre </li>
+            <li>Mensaje </li>
+            <li>Fecha </li>
+        </ul>
+        <h4 id="5-correo-autom-tico">5. Correo Automático</h4>
+        <p>Se envía un correo cuando un usuario escribe /contacto:
+            js</p>
+        <p>CopiarEditar</p>
+        <p><code>function sendEmail() {
             var email = &quot;ilozano@institutmvm.cat&quot;;
             var subject = &quot;Solicitud de contacto desde el bot de Telegram&quot;;
             var body = &quot;Una persona ha solicitado ayuda a través del bot de Telegram.&quot;;
             MailApp.sendEmail(email, subject, body);
             }</code></p><br>
 
-            <h2 id="-despliegue-y-pruebas">Despliegue y Pruebas</h2>
-            <ol>
-                <li>Ir a Deploy &gt; Manage deployments en el entorno de Google Apps Script. </li>
-                <li>Crear un nuevo despliegue tipo Web app.
-                    <pre><code>  -<span class="ruby">    Ejecutar <span class="hljs-symbol">como:</span> Yo 
+        <h2 id="-despliegue-y-pruebas">Despliegue y Pruebas</h2>
+        <ol>
+            <li>Ir a Deploy &gt; Manage deployments en el entorno de Google Apps Script. </li>
+            <li>Crear un nuevo despliegue tipo Web app.
+                <pre><code>  -<span class="ruby">    Ejecutar <span class="hljs-symbol">como:</span> Yo 
             </span>  -<span class="ruby">    Quién tiene <span class="hljs-symbol">acceso:</span> Cualquiera, incluso anónimo  </span>
             </code></pre>
-                </li>
-                <li>Copiar la URL generada y establecerla como webhook con la función setWebhook(). </li>
-                <li>Probar el bot enviando /start desde Telegram. </li>
-            </ol>
-            <h2 id="-seguridad">Seguridad</h2>
-            <ul>
-                <li>Solo se responde a comandos conocidos. </li>
-                <li>Se limita el método GET para evitar accesos no deseados:<br>js</li>
-            </ul>
-            <p>CopiarEditar
-                <code>function doGet(e){
+            </li>
+            <li>Copiar la URL generada y establecerla como webhook con la función setWebhook(). </li>
+            <li>Probar el bot enviando /start desde Telegram. </li>
+        </ol>
+        <h2 id="-seguridad">Seguridad</h2>
+        <ul>
+            <li>Solo se responde a comandos conocidos. </li>
+            <li>Se limita el método GET para evitar accesos no deseados:<br>js</li>
+        </ul>
+        <p>CopiarEditar
+            <code>function doGet(e){
 return ContentService.createTextOutput(&quot;Método GET no permitido&quot;);
 }</code>
-            </p><br>
+        </p><br>
 
-            <h3 id="guacamole">Guacamole</h3>
-            <p>Un resumen rápido: este script automatiza la instalación de Guacamole Server (guacd), la configuración de
-                Apache Tomcat 9, la implementación del cliente web (WAR) y la autenticación JDBC con MariaDB/MySQL,
-                creando además los servicios systemd necesarios y limpiando los archivos temporales al finalizar.
-                Contenido</p>
-            <p>
-                <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdRoyvpCBeyH6bNAAyEKJfrteBhoxra1a7gI55s36YXEMJdJXTalUY6p7LbWHAGAVjlKi2FQ9AKz4Sf6iGkpHvHhnoJR-NwVUX-juJPmck1cp1cklTd0pD_DyfXH3gei9eLmFKuZA?key=bIX_5tSRefdf6U4xLekssY8_"
-                    width="250" height="250" alt="">
-            </p>
-            <pre><code><span class="hljs-number">1.</span> Requisitos previos
+        <h3 id="guacamole">Guacamole</h3>
+        <p>Un resumen rápido: este script automatiza la instalación de Guacamole Server (guacd), la configuración de
+            Apache Tomcat 9, la implementación del cliente web (WAR) y la autenticación JDBC con MariaDB/MySQL,
+            creando además los servicios systemd necesarios y limpiando los archivos temporales al finalizar.
+            Contenido</p>
+        <p>
+            <img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdRoyvpCBeyH6bNAAyEKJfrteBhoxra1a7gI55s36YXEMJdJXTalUY6p7LbWHAGAVjlKi2FQ9AKz4Sf6iGkpHvHhnoJR-NwVUX-juJPmck1cp1cklTd0pD_DyfXH3gei9eLmFKuZA?key=bIX_5tSRefdf6U4xLekssY8_"
+                width="250" height="250" alt="">
+        </p>
+        <pre><code><span class="hljs-number">1.</span> Requisitos previos
                 
                 <span class="hljs-number">2.</span> Obtención y ejecución del script
                 
@@ -430,50 +429,50 @@ return ContentService.createTextOutput(&quot;Método GET no permitido&quot;);
                 
                 <span class="hljs-number">6.</span> Referencias
                 </code></pre>
-            <ol>
-                <li>
-                    <p>Requisitos previos</p>
-                    <p> Proxmox VE 8.x (o superior) en un contenedor LXC o VM Debian/Ubuntu.
-                        community-scripts.github.io</p>
-                    <p> Acceso root o usuario con sudo sin contraseña.
-                        community-scripts.github.io</p>
-                    <p> Conectividad a Internet para descargar paquetes y código fuente.</p>
-                </li>
-                <li>
-                    <p>Obtención y ejecución del script</p>
-                </li>
-            </ol>
-            <p>Descarga y ejecuta el instalador directamente desde GitHub:</p>
-            <p>curl -fsSL <a
-                    href="https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/apache-guacamole-install.sh">https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/apache-guacamole-install.sh</a>
-                | bash</p>
-            <p>Este comando lee y ejecuta el script ubicado en el repositorio oficial de Proxmox VE Helper-Scripts
-                community-scripts.github.io
-                .</p>
-            <pre><code><span class="hljs-built_in">T</span><span class="hljs-symbol">ip:</span> Para mayor control, clona el repositorio, ajusta variables (versió<span class="hljs-built_in">n</span> de Guacamole, rutas), y ejecútalo localmente.
+        <ol>
+            <li>
+                <p>Requisitos previos</p>
+                <p> Proxmox VE 8.x (o superior) en un contenedor LXC o VM Debian/Ubuntu.
+                    community-scripts.github.io</p>
+                <p> Acceso root o usuario con sudo sin contraseña.
+                    community-scripts.github.io</p>
+                <p> Conectividad a Internet para descargar paquetes y código fuente.</p>
+            </li>
+            <li>
+                <p>Obtención y ejecución del script</p>
+            </li>
+        </ol>
+        <p>Descarga y ejecuta el instalador directamente desde GitHub:</p>
+        <p>curl -fsSL <a
+                href="https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/apache-guacamole-install.sh">https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/apache-guacamole-install.sh</a>
+            | bash</p>
+        <p>Este comando lee y ejecuta el script ubicado en el repositorio oficial de Proxmox VE Helper-Scripts
+            community-scripts.github.io
+            .</p>
+        <pre><code><span class="hljs-built_in">T</span><span class="hljs-symbol">ip:</span> Para mayor control, clona el repositorio, ajusta variables (versió<span class="hljs-built_in">n</span> de Guacamole, rutas), y ejecútalo localmente.
                 </code></pre>
-            <ol>
-                <li>Desglose paso a paso
-                    3.1 Instalación de dependencias</li>
-            </ol>
-            <p>Se instalan todos los paquetes necesarios para compilar guacamole-server y soportar RDP/VNC/SSH:</p>
-            <p>apt-get update
-                apt-get install -y build-essential libcairo2-dev libpng-dev \
-                libossp-uuid-dev libvncserver-dev freerdp2-dev libssh2-1-dev \
-                libtelnet-dev libwebsockets-dev libpulse-dev libvorbis-dev \
-                libwebp-dev libssl-dev libpango1.0-dev libswscale-dev \
-                libavcodec-dev libavutil-dev libavformat-dev \
-                default-jdk mariadb-server</p>
-            <p>Estas mismas librerías se mencionan en la documentación oficial de Guacamole .</p>
-            <p>3.2 Configuración de Apache Tomcat 9</p>
-            <pre><code>Descarga automática <span class="hljs-keyword">de</span> <span class="hljs-keyword">la</span> última Tomcat 9 desde mirrors <span class="hljs-keyword">de</span> Apache.
+        <ol>
+            <li>Desglose paso a paso
+                3.1 Instalación de dependencias</li>
+        </ol>
+        <p>Se instalan todos los paquetes necesarios para compilar guacamole-server y soportar RDP/VNC/SSH:</p>
+        <p>apt-get update
+            apt-get install -y build-essential libcairo2-dev libpng-dev \
+            libossp-uuid-dev libvncserver-dev freerdp2-dev libssh2-1-dev \
+            libtelnet-dev libwebsockets-dev libpulse-dev libvorbis-dev \
+            libwebp-dev libssl-dev libpango1.0-dev libswscale-dev \
+            libavcodec-dev libavutil-dev libavformat-dev \
+            default-jdk mariadb-server</p>
+        <p>Estas mismas librerías se mencionan en la documentación oficial de Guacamole .</p>
+        <p>3.2 Configuración de Apache Tomcat 9</p>
+        <pre><code>Descarga automática <span class="hljs-keyword">de</span> <span class="hljs-keyword">la</span> última Tomcat 9 desde mirrors <span class="hljs-keyword">de</span> Apache.
 
 Extracció<span class="hljs-keyword">n</span> <span class="hljs-keyword">en</span> /opt/apache-guacamole/tomcat9 y creació<span class="hljs-keyword">n</span> del usuario <span class="hljs-keyword">de</span> sistema tomcat.
 
 Ajuste <span class="hljs-keyword">de</span> permisos <span class="hljs-keyword">en</span> <span class="hljs-keyword">conf</span>/ para asegurar <span class="hljs-keyword">que</span> sólo root y tomcat puedan leer <span class="hljs-keyword">la</span> configuració<span class="hljs-keyword">n</span>.
 </code></pre>
-            <p>3.3 Compilación e instalación de Guacamole Server</p>
-            <pre><code>Obtiene <span class="hljs-keyword">el</span> último <span class="hljs-keyword">tag</span> de apache/guacamole-server.
+        <p>3.3 Compilación e instalación de Guacamole Server</p>
+        <pre><code>Obtiene <span class="hljs-keyword">el</span> último <span class="hljs-keyword">tag</span> de apache/guacamole-server.
 
 Compila <span class="hljs-keyword">e</span> instala <span class="hljs-keyword">con</span>:
 
@@ -484,15 +483,15 @@ autoreconf -fi
 
 Esto crea guacd, <span class="hljs-keyword">el</span> demonio de multiplexación de conexiones RDP/VNC/SSH .
 </code></pre>
-            <p>3.4 Despliegue del cliente web</p>
-            <pre><code>Descarga <span class="hljs-selector-tag">del</span> guacamole-&lt;versión&gt;<span class="hljs-selector-class">.war</span> desde los mirrors de Apache.
+        <p>3.4 Despliegue del cliente web</p>
+        <pre><code>Descarga <span class="hljs-selector-tag">del</span> guacamole-&lt;versión&gt;<span class="hljs-selector-class">.war</span> desde los mirrors de Apache.
 
 Copia <span class="hljs-selector-tag">a</span> /opt/apache-guacamole/tomcat9/webapps/guacamole<span class="hljs-selector-class">.war</span>.
 
 Acceso al cliente en http:<span class="hljs-comment">//&lt;IP-del-nodo&gt;:8080/guacamole.</span>
 </code></pre>
-            <p>3.5 Configuración de autenticación JDBC</p>
-            <pre><code>Descarga <span class="hljs-keyword">de</span> MySQL Connector/J y Guacamole JDBC <span class="hljs-keyword">plugin</span>.
+        <p>3.5 Configuración de autenticación JDBC</p>
+        <pre><code>Descarga <span class="hljs-keyword">de</span> MySQL Connector/J y Guacamole JDBC <span class="hljs-keyword">plugin</span>.
 
 Ubicació<span class="hljs-keyword">n</span> <span class="hljs-keyword">de</span> los JAR <span class="hljs-keyword">en</span> /etc/guacamole/lib/ y /etc/guacamole/extensions/.
 
@@ -507,600 +506,599 @@ Importació<span class="hljs-keyword">n</span> del esquema SQL (*.sql) <span cla
 
 Generació<span class="hljs-keyword">n</span> <span class="hljs-keyword">de</span> /etc/guacamole/guacamole.properties con los parámetros <span class="hljs-keyword">de</span> conexió<span class="hljs-keyword">n</span>.
 </code></pre>
-            <p>3.6 Servicios systemd</p>
-            <p>Se crean y habilitan dos unidades:</p>
-            <pre><code>guacd<span class="hljs-selector-class">.service</span> que gestiona el demonio guacd.
+        <p>3.6 Servicios systemd</p>
+        <p>Se crean y habilitan dos unidades:</p>
+        <pre><code>guacd<span class="hljs-selector-class">.service</span> que gestiona el demonio guacd.
 
 tomcat<span class="hljs-selector-class">.service</span> para arrancar Tomcat con CATALINA_HOME=/opt/apache-guacamole/tomcat9.
 </code></pre>
-            <p>Ambos servicios, junto a MariaDB, se inician automáticamente al arranque .</p>
-            <ol>
-                <li>
-                    <p>Post-instalación y personalización</p>
-                    <p> Credenciales: revisa el fichero ~/guacamole.creds para usuario, contraseña y DB.</p>
-                    <p> Firewall: abre los puertos 4822 (guacd) y 8080 (Tomcat).
-                        GitHub</p>
-                    <p> HTTPS: en producción, usa un proxy inverso (nginx/Traefik) con certificado TLS.
-                        community-scripts.github.io</p>
-                    <p> Backups: respalda /etc/guacamole/ y la base de datos periódicamente.</p>
-                </li>
-                <li>
-                    <p>Limpieza final</p>
-                </li>
-            </ol>
-            <p>El script elimina archivos temporales (*.tar.gz, carpetas de compilación) y ejecuta apt autoremove y apt
-                autoclean para liberar espacio .</p>
-            <ol>
-                <li>
-                    <p>Referencias</p>
-                    <p> Script apache-guacamole-install.sh – Proxmox VE Helper-Scripts (Community)
-                        community-scripts.github.io</p>
-                    <p> Proxmox VE Helper-Scripts – Página oficial de la comunidad de scripts.
-                        community-scripts.github.io</p>
-                    <p> Guacamole Installing Guide – Documentación oficial Apache Guacamole.</p>
-                    <p> Issue: guacd sólo escucha IPv6 – Detalle de puerto y binding en el script.
-                        GitHub</p>
-                    <p> Cambio en guacd service – Corrección de inicio en release 2024-12-31.</p>
-                </li>
-            </ol><br>
+        <p>Ambos servicios, junto a MariaDB, se inician automáticamente al arranque .</p>
+        <ol>
+            <li>
+                <p>Post-instalación y personalización</p>
+                <p> Credenciales: revisa el fichero ~/guacamole.creds para usuario, contraseña y DB.</p>
+                <p> Firewall: abre los puertos 4822 (guacd) y 8080 (Tomcat).
+                    GitHub</p>
+                <p> HTTPS: en producción, usa un proxy inverso (nginx/Traefik) con certificado TLS.
+                    community-scripts.github.io</p>
+                <p> Backups: respalda /etc/guacamole/ y la base de datos periódicamente.</p>
+            </li>
+            <li>
+                <p>Limpieza final</p>
+            </li>
+        </ol>
+        <p>El script elimina archivos temporales (*.tar.gz, carpetas de compilación) y ejecuta apt autoremove y apt
+            autoclean para liberar espacio .</p>
+        <ol>
+            <li>
+                <p>Referencias</p>
+                <p> Script apache-guacamole-install.sh – Proxmox VE Helper-Scripts (Community)
+                    community-scripts.github.io</p>
+                <p> Proxmox VE Helper-Scripts – Página oficial de la comunidad de scripts.
+                    community-scripts.github.io</p>
+                <p> Guacamole Installing Guide – Documentación oficial Apache Guacamole.</p>
+                <p> Issue: guacd sólo escucha IPv6 – Detalle de puerto y binding en el script.
+                    GitHub</p>
+                <p> Cambio en guacd service – Corrección de inicio en release 2024-12-31.</p>
+            </li>
+        </ol><br>
 
-            <h3 id="requisitos-de-la-maquina">Requisitos de la maquina</h3>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf0hBggfUFqo8j8fvk9iZ7un2SSUifE1oRp1SQvGH-SaWjiKG_F5YdN24VKChXiRJBU9pkwHQYMFljK4VpwDdX0Epkg6O2KqPKDOVuQw5r-ovX753mvrv77_c_fMM6ipKGV1QbabQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdfG6q4CG0LFpYtrBpH5qlRnQ_zUmMU3gasxaIgdb8Os2Q86Lue79zMEWCmou_-vCnSmf1QKkSK-D90k2gMpgBZ_N5Nh7aaTsm4VE51oWa-uY820lK-tM3HRl7Il6b2KuZjrnBYqQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfnyk8vrgnJuKI6AigSxe4Jcq4LwSfYkf1RMhXpWFyuYHgmk2979gmjeK9lhuvqglIvSZoLpAmb8Zb_bm896iHn-G86ioknia8EhJJa1MUyfEXfqwBuuwDejgqZqEYtAABlp0vG-g?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdl8Z6rs0CHcGllaQo1vgD3_Bd5DPGl4vdPMTPIrDFYJiLfb-TtEAdn1JVFgqhVR9yeIFd1-2xoXNN19WrAlSBXkJPFe-fQjoJ5LvzJx9-9bv9GniE3h3HitgiHxOEJ04pUwG9s9Q?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcVtapgczOaOL18Rb0VpEvaeeAE-EXsCpf6YQZNpxR0XYStsE1g9RMyOfP8eOLNlspmqoDu4OWjRE17AOc6oTKLikCSlwMcml0UcpNVOHwYC0_Tyhdp00Mq-tydRRqvLcTOeXeqwQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcUlbFFIduwlg6cz-7inRI25oK7Yy3H2GPiXNvP3iqKOX2En92OVuDIsQoriVTYKhBgXcdWUEEl9_eISBW35_HRJeEc5VPy09P5TRv7WhaGLuzvZjLX9caikfCHGR4TbEz6P9AC2g?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfvddxHpeJn8DU5wEBhhwJmrHzmPMAGFH1fLB9bL_TUYHmtTM_kRhuuQ4coK0WGc2T4UP294OT74gOTY5-lx8oZ_De0uL5jX32bkHINfYNrpmgPvJFkfUFbqLLZslg423uZPKwMEQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p><br>
+        <h3 id="requisitos-de-la-maquina">Requisitos de la maquina</h3>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf0hBggfUFqo8j8fvk9iZ7un2SSUifE1oRp1SQvGH-SaWjiKG_F5YdN24VKChXiRJBU9pkwHQYMFljK4VpwDdX0Epkg6O2KqPKDOVuQw5r-ovX753mvrv77_c_fMM6ipKGV1QbabQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdfG6q4CG0LFpYtrBpH5qlRnQ_zUmMU3gasxaIgdb8Os2Q86Lue79zMEWCmou_-vCnSmf1QKkSK-D90k2gMpgBZ_N5Nh7aaTsm4VE51oWa-uY820lK-tM3HRl7Il6b2KuZjrnBYqQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfnyk8vrgnJuKI6AigSxe4Jcq4LwSfYkf1RMhXpWFyuYHgmk2979gmjeK9lhuvqglIvSZoLpAmb8Zb_bm896iHn-G86ioknia8EhJJa1MUyfEXfqwBuuwDejgqZqEYtAABlp0vG-g?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdl8Z6rs0CHcGllaQo1vgD3_Bd5DPGl4vdPMTPIrDFYJiLfb-TtEAdn1JVFgqhVR9yeIFd1-2xoXNN19WrAlSBXkJPFe-fQjoJ5LvzJx9-9bv9GniE3h3HitgiHxOEJ04pUwG9s9Q?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcVtapgczOaOL18Rb0VpEvaeeAE-EXsCpf6YQZNpxR0XYStsE1g9RMyOfP8eOLNlspmqoDu4OWjRE17AOc6oTKLikCSlwMcml0UcpNVOHwYC0_Tyhdp00Mq-tydRRqvLcTOeXeqwQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcUlbFFIduwlg6cz-7inRI25oK7Yy3H2GPiXNvP3iqKOX2En92OVuDIsQoriVTYKhBgXcdWUEEl9_eISBW35_HRJeEc5VPy09P5TRv7WhaGLuzvZjLX9caikfCHGR4TbEz6P9AC2g?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfvddxHpeJn8DU5wEBhhwJmrHzmPMAGFH1fLB9bL_TUYHmtTM_kRhuuQ4coK0WGc2T4UP294OT74gOTY5-lx8oZ_De0uL5jX32bkHINfYNrpmgPvJFkfUFbqLLZslg423uZPKwMEQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p><br>
 
-            <h3 id="instalar-guacamole-en-ubuntu-server">Instalar guacamole en ubuntu server</h3>
-            <p>Modificar la Configuración del Contenedor para Soportar Docker</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfXVUDFcDQPNAWOU94dEfyeB5eNlRFuqkEoucu2kWnydeueFT8aRantWipM_wjUX_TAgdGspa68yLL8HnLFtGxj4waJZIx9NuTLGbMKrZfC4NJ7XZUtivThQrKLEjyPe3oLeO7bzQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p>Instala dependencias:</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXepWLVBqJFx7lITgXs_2StVZdVp2U294eghWb7P7pc2moynaRK6SB3xOrBqWmlxx3qR_2LoMsFTJzyCyTLjwm-84JzX990czWTDB8txgdwXr9L7_6cT5l85bWBTWmNUxAEQbbCv?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p>Añadir repositorio de Docker:</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf9W10ffrgN6dboNzM1JB25xdIwKLRsmrLxIQ-jtq5WkVTxJAl2OVZe08iFVbUb6VVrd8Va8sOnyWy9F4MTImI_QeAOi4dyS8UihuYxo6WMUfJX3MB3w8qSEWsIbAfRkHpQZErK?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt="" width="750"></p>
-            <p>Instalar Docker y Docker Compose:</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcuvw1cc00wS7Hl6PfH7ysom16e0YbKSHBQsM5NEaeRMMYsTYvvYet2eTouZP6mMOySiY7Uimlk_nLMZYFoZvbHdqC8bUNbK9P2yABxEKQuuO7dtklFPqvTD7nrT2Nwf8aHU8WMOA?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p>Crea la carpeta de instalación:</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXePOrm-uj2ErXKJkEV2Zl8Lrl5dNTWivEIWTLnw2T-8O-baa5MvXAq82wDD_MI1regVfR-2M0iKTFLPN3b8d1gPceeKXBEhE7N7X0ufRVU4nFN21ZZbIP0IKWSUL8nNeY4HBuLG?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p>Crea el archivo docker-compose.yml:</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcp7zaG5sM13LwAzlWj9KOp9_nwyBM_yv4DxMKj9HKRyxUXEq-UHVIXmWhrSMPHb9oIEYJ-PErxAv5TnLMDj-7Uev4cEgF0pC7RwgjzTLw3XXcSag61MJq08lVk0OhXozlxdnD2QQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p><a href="https://ikerm01.github.io/project2.github.io/">https://ikerm01.github.io/project2.github.io/</a>
-            </p>
-            <p><a
-                    href="https://github.com/Ikerm01/project2.github.io#">https://github.com/Ikerm01/project2.github.io#</a>
-            </p>
-            <p>version: &#39;3&#39;</p>
-            <p>services:</p>
-            <p>guacd:</p>
-            <p>image: guacamole/guacd</p>
-            <p>container_name: guacd</p>
-            <p>restart: always</p>
-            <p>postgres:</p>
-            <p>image: postgres</p>
-            <p>container_name: guac-db</p>
-            <p>environment:</p>
-            <p>POSTGRES_DB: guacamole_db</p>
-            <p>POSTGRES_USER: guacamole</p>
-            <p>POSTGRES_PASSWORD: 1234321</p>
-            <p>restart: always</p>
-            <p>volumes:</p>
-            <ul>
-                <li>postgres_data:/var/lib/postgresql/data</li>
-            </ul>
-            <p>guacamole:</p>
-            <p>image: guacamole/guacamole</p>
-            <p>container_name: guacamole</p>
-            <p>restart: always</p>
-            <p>depends_on:</p>
-            <ul>
-                <li>
-                    <p>guacd</p>
-                </li>
-                <li>
-                    <p>postgres</p>
-                </li>
-            </ul>
-            <p>environment:</p>
-            <p>GUACD_HOSTNAME: guacd</p>
-            <p>POSTGRES_DATABASE: guacamole_db</p>
-            <p>POSTGRES_USER: guacamole</p>
-            <p>POSTGRES_PASSWORD: 1234321</p>
-            <p>ports:</p>
-            <ul>
-                <li>&quot;8080:8080&quot;</li>
-            </ul>
-            <p>volumes:</p>
-            <p>postgres_data:</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdDKja7B4MKCXf2pcRKLCv_UKyAyGEausdyUQ7EkGJUXjokx0ZZ5QGuKqmiBmc7q4Gpd8FCU57rc68-lFcI38ARgWN-tduQ8zkuSvO_lcZ2SOw_lNFFTB9lbU9YP9hZSPAnfmUhzA?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p>funcionamiento de guacamole</p>
-            <p>crear usuario</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeTID5ryAda7RrZYuO4oizX2xCHiesQ9y3lQwNQqVtSUe8YwWzHFkhVOj5q2wvowRiY-_3rLWIz9rXV_3OgAkH11yZsOwviSyGPIbhwSFv-xfWnd72XlgEtasCZ9Fw2lNfInrG8nQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p>Pruebas rdp (debemos tener activado en nuestro windows el escritorio remoto)</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe2JTLScEj2mP1yq3l3kuetCE34EvlyosoaRfWp1waJkJ8sPiE2EsFti1Lv8NnarHP7ICupTOoQ40wN_V8J7HOI0AXZGkYL79fgj-ugOBR23CxSb69FBzFDQ2jJD-kq64B_LHximg?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcMnmyfFBEujCB-F870ZtZ7o60eCagweCJBeqKpUZbRNAfIy8mG9xpzhUtInlZ7GpXxF8IM2IbfE9AALL5ONqA-QC9dCBtb_lN6539ICz1fJJW-zrH3dZuvUAgGNbKrw4GnhxyNmw?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p>Prueba ssh (debemos de tener instalado el openssl)</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeZ90_uM-xx1Ji5w26pFJ1UDwB_cZVPe75Igoi96_2Zxs4UB_SoZGJlZ3ftlDdEss9Z8HY9FQlq-xuWYSvyCRV7bCz6hZ1gXgTJ1U1zhXnFdsPODbr8BfIN12Q1w8fIrmjZyO9r_A?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcc6se1_3LG-YzvO7RUXC3OMUHLTpgEilS2XdVwtDdkwxmgZLXrwQLaCQ46kvvI60PfLZ6apcqeBpKm4d2LRMrgds3D3UHENMhD0L3rtani7Th8i3smXm2rhmDPi6TDBehIqW1T5A?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p>Prueba vnc (debemos de tener instalado algun programa de vnc)</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdDgxZks2B_sLot81kQMyisj-xMNGRJBzijxhrgVCc48GCr9VYfdgn3n71f2TOBxweFzEKH--JmlY-nfqeRLH3XHHr5VPbQadf2M-fL104I0zFD1WBMjInPwT_a6LKQS1vR5fRBwg?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt=""></p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXccrnXMKEiaj2bUup_RkbfK079Z6s2048Xx-Gl3G0w1J08r5A7PoFwEG6mMCuaKVrMlQtIFLtXWLgjtT93i0Ew_ZA6i1HkH1ofWevMBIjsJlY0lBXwEscvazRh_H2oXDZd2McXFOw?key=6_qsOPbjJtyDIsaKX8OIJgh_"
-                    alt="" width="1000"></p><br>
+        <h3 id="instalar-guacamole-en-ubuntu-server">Instalar guacamole en ubuntu server</h3>
+        <p>Modificar la Configuración del Contenedor para Soportar Docker</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfXVUDFcDQPNAWOU94dEfyeB5eNlRFuqkEoucu2kWnydeueFT8aRantWipM_wjUX_TAgdGspa68yLL8HnLFtGxj4waJZIx9NuTLGbMKrZfC4NJ7XZUtivThQrKLEjyPe3oLeO7bzQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p>Instala dependencias:</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXepWLVBqJFx7lITgXs_2StVZdVp2U294eghWb7P7pc2moynaRK6SB3xOrBqWmlxx3qR_2LoMsFTJzyCyTLjwm-84JzX990czWTDB8txgdwXr9L7_6cT5l85bWBTWmNUxAEQbbCv?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p>Añadir repositorio de Docker:</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf9W10ffrgN6dboNzM1JB25xdIwKLRsmrLxIQ-jtq5WkVTxJAl2OVZe08iFVbUb6VVrd8Va8sOnyWy9F4MTImI_QeAOi4dyS8UihuYxo6WMUfJX3MB3w8qSEWsIbAfRkHpQZErK?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt="" width="750"></p>
+        <p>Instalar Docker y Docker Compose:</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcuvw1cc00wS7Hl6PfH7ysom16e0YbKSHBQsM5NEaeRMMYsTYvvYet2eTouZP6mMOySiY7Uimlk_nLMZYFoZvbHdqC8bUNbK9P2yABxEKQuuO7dtklFPqvTD7nrT2Nwf8aHU8WMOA?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p>Crea la carpeta de instalación:</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXePOrm-uj2ErXKJkEV2Zl8Lrl5dNTWivEIWTLnw2T-8O-baa5MvXAq82wDD_MI1regVfR-2M0iKTFLPN3b8d1gPceeKXBEhE7N7X0ufRVU4nFN21ZZbIP0IKWSUL8nNeY4HBuLG?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p>Crea el archivo docker-compose.yml:</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcp7zaG5sM13LwAzlWj9KOp9_nwyBM_yv4DxMKj9HKRyxUXEq-UHVIXmWhrSMPHb9oIEYJ-PErxAv5TnLMDj-7Uev4cEgF0pC7RwgjzTLw3XXcSag61MJq08lVk0OhXozlxdnD2QQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p><a href="https://ikerm01.github.io/project2.github.io/">https://ikerm01.github.io/project2.github.io/</a>
+        </p>
+        <p><a href="https://github.com/Ikerm01/project2.github.io#">https://github.com/Ikerm01/project2.github.io#</a>
+        </p>
+        <p>version: &#39;3&#39;</p>
+        <p>services:</p>
+        <p>guacd:</p>
+        <p>image: guacamole/guacd</p>
+        <p>container_name: guacd</p>
+        <p>restart: always</p>
+        <p>postgres:</p>
+        <p>image: postgres</p>
+        <p>container_name: guac-db</p>
+        <p>environment:</p>
+        <p>POSTGRES_DB: guacamole_db</p>
+        <p>POSTGRES_USER: guacamole</p>
+        <p>POSTGRES_PASSWORD: 1234321</p>
+        <p>restart: always</p>
+        <p>volumes:</p>
+        <ul>
+            <li>postgres_data:/var/lib/postgresql/data</li>
+        </ul>
+        <p>guacamole:</p>
+        <p>image: guacamole/guacamole</p>
+        <p>container_name: guacamole</p>
+        <p>restart: always</p>
+        <p>depends_on:</p>
+        <ul>
+            <li>
+                <p>guacd</p>
+            </li>
+            <li>
+                <p>postgres</p>
+            </li>
+        </ul>
+        <p>environment:</p>
+        <p>GUACD_HOSTNAME: guacd</p>
+        <p>POSTGRES_DATABASE: guacamole_db</p>
+        <p>POSTGRES_USER: guacamole</p>
+        <p>POSTGRES_PASSWORD: 1234321</p>
+        <p>ports:</p>
+        <ul>
+            <li>&quot;8080:8080&quot;</li>
+        </ul>
+        <p>volumes:</p>
+        <p>postgres_data:</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdDKja7B4MKCXf2pcRKLCv_UKyAyGEausdyUQ7EkGJUXjokx0ZZ5QGuKqmiBmc7q4Gpd8FCU57rc68-lFcI38ARgWN-tduQ8zkuSvO_lcZ2SOw_lNFFTB9lbU9YP9hZSPAnfmUhzA?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p>funcionamiento de guacamole</p>
+        <p>crear usuario</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeTID5ryAda7RrZYuO4oizX2xCHiesQ9y3lQwNQqVtSUe8YwWzHFkhVOj5q2wvowRiY-_3rLWIz9rXV_3OgAkH11yZsOwviSyGPIbhwSFv-xfWnd72XlgEtasCZ9Fw2lNfInrG8nQ?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p>Pruebas rdp (debemos tener activado en nuestro windows el escritorio remoto)</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXe2JTLScEj2mP1yq3l3kuetCE34EvlyosoaRfWp1waJkJ8sPiE2EsFti1Lv8NnarHP7ICupTOoQ40wN_V8J7HOI0AXZGkYL79fgj-ugOBR23CxSb69FBzFDQ2jJD-kq64B_LHximg?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcMnmyfFBEujCB-F870ZtZ7o60eCagweCJBeqKpUZbRNAfIy8mG9xpzhUtInlZ7GpXxF8IM2IbfE9AALL5ONqA-QC9dCBtb_lN6539ICz1fJJW-zrH3dZuvUAgGNbKrw4GnhxyNmw?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p>Prueba ssh (debemos de tener instalado el openssl)</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeZ90_uM-xx1Ji5w26pFJ1UDwB_cZVPe75Igoi96_2Zxs4UB_SoZGJlZ3ftlDdEss9Z8HY9FQlq-xuWYSvyCRV7bCz6hZ1gXgTJ1U1zhXnFdsPODbr8BfIN12Q1w8fIrmjZyO9r_A?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcc6se1_3LG-YzvO7RUXC3OMUHLTpgEilS2XdVwtDdkwxmgZLXrwQLaCQ46kvvI60PfLZ6apcqeBpKm4d2LRMrgds3D3UHENMhD0L3rtani7Th8i3smXm2rhmDPi6TDBehIqW1T5A?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p>Prueba vnc (debemos de tener instalado algun programa de vnc)</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdDgxZks2B_sLot81kQMyisj-xMNGRJBzijxhrgVCc48GCr9VYfdgn3n71f2TOBxweFzEKH--JmlY-nfqeRLH3XHHr5VPbQadf2M-fL104I0zFD1WBMjInPwT_a6LKQS1vR5fRBwg?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt=""></p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXccrnXMKEiaj2bUup_RkbfK079Z6s2048Xx-Gl3G0w1J08r5A7PoFwEG6mMCuaKVrMlQtIFLtXWLgjtT93i0Ew_ZA6i1HkH1ofWevMBIjsJlY0lBXwEscvazRh_H2oXDZd2McXFOw?key=6_qsOPbjJtyDIsaKX8OIJgh_"
+                alt="" width="1000"></p><br>
 
 
-            <h3 id="vpn">VPN</h3>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXewmcVOI2RLH062eqjUGPNoGJwXE05uzs3fppcN6et5JgwsXwRGJ8z6sNU_XDayWawk5pvgmFIvR3cQzCgU1KY6myg-w8wcCW7ffxORdnRjTJuNdXKdzr6MuqyYE9-OPF3alit7zg?key=bIX_5tSRefdf6U4xLekssY8_"
-                    width="250" height="250" alt=""></p>
-            <h4 id="-requisitos">Requisitos</h4>
-            <ul>
-                <li>
-                    <p>Una instalación funcional de pfSense (v2.4 o superior recomendado)</p>
-                </li>
-                <li>
-                    <p>Acceso administrativo a pfSense</p>
-                </li>
-                <li>
-                    <p>Un cliente VPN compatible (OpenVPN Client para Windows, macOS, Linux, Android, etc.)</p>
-                </li>
-            </ul>
-            <hr>
-            <h4 id="-paso-1-instalar-el-paquete-de-openvpn">Paso 1: Instalar el paquete de OpenVPN</h4>
-            <ol>
-                <li>
-                    <p>Ir a <code>System &gt; Package Manager &gt; Available Packages</code>.</p>
-                </li>
-                <li>
-                    <p>Buscar <code>openvpn-client-export</code>.</p>
-                </li>
-                <li>
-                    <p>Instalar el paquete.</p>
-                </li>
-            </ol>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXefI-IBbq9YwypghvtqZ7XbjeX3tjs_kBgCUCZPD5P5hyL38sKhUjIDxdm0Kc-N5r3D7YTE2877wt-GweUPMQ4Uv5l9OKemg2AIYRQ3PM0Y_rTalNsjeLbwYQSlmAiTQ6tXKhqU?key=_YQlVURTdgHza7i-ocS-hCXB"
-                    alt=""></p>
-            <hr>
-            <h4 id="-paso-2-crear-una-autoridad-certificadora-ca-">Paso 2: Crear una Autoridad Certificadora (CA)
-            </h4>
-            <ol>
-                <li>
-                    <p>Ir a <code>System &gt; Cert. Manager &gt; CAs</code>.</p>
-                </li>
-                <li>
-                    <p>Click en <code>Add</code>.</p>
-                </li>
-                <li>
-                    <p>Llenar los campos:</p>
-                </li>
-                <li>
-                    <p><strong>Descriptive Name:</strong> <code>VPN_CA</code></p>
-                </li>
-                <li>
-                    <p><strong>Method:</strong> Create an internal Certificate Authority</p>
-                </li>
-                <li>
-                    <p>Rellenar los campos de país, estado, ciudad, etc.</p>
-                </li>
-                <li>
-                    <p>Guardar.</p>
-                </li>
-            </ol>
-            <hr>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXd8cbMTbx3ja2U-JxPsaFtc3Vi4qWQ1_B3T3A5ScCTsA3Op9awhTySMbOf9ejKWnH5360vj50ujeQe8iIN4n5vHNLW6ESLzbSK2zWhzvHS8ORilgBsZj7SCcq2oIvuEt0KSOp5XPw?key=_YQlVURTdgHza7i-ocS-hCXB"
-                    alt=""></p>
-            <h4 id="-paso-3-crear-el-certificado-del-servidor">Paso 3: Crear el Certificado del Servidor</h4>
-            <ol>
-                <li>
-                    <p>Ir a <code>System &gt; Cert. Manager &gt; Certificates</code>.</p>
-                </li>
-                <li>
-                    <p>Click en <code>Add/Sign</code>.</p>
-                </li>
-                <li>
-                    <p>Llenar los campos:</p>
-                </li>
-                <li>
-                    <p><strong>Method:</strong> Create an internal certificate</p>
-                </li>
-                <li>
-                    <p><strong>Descriptive Name:</strong> <code>OpenVPN_Server</code></p>
-                </li>
-                <li>
-                    <p><strong>Certificate Type:</strong> Server Certificate</p>
-                </li>
-                <li>
-                    <p>Seleccionar la CA creada anteriormente</p>
-                </li>
-                <li>
-                    <p>Rellenar los datos requeridos</p>
-                </li>
-                <li>
-                    <p>Guardar.</p>
-                </li>
-            </ol>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcYIr6d8_ORN79nfRmXzzGUCqHOusni7zGTIYg8WTznb8J84Z1CmP835H42MwDd38jHm1XzqJOxxslEUY-J5BhRlzxP8ymJmpeCA3DH88Grw66eA00iSrtKKsb3EO3gENyZmMGJ-w?key=_YQlVURTdgHza7i-ocS-hCXB"
-                    alt=""></p>
-            <hr>
-            <h4 id="-paso-4-crear-el-servidor-openvpn">Paso 4: Crear el Servidor OpenVPN</h4>
-            <ol>
-                <li>
-                    <p>Ir a <code>VPN &gt; OpenVPN &gt; Servers</code>.</p>
-                </li>
-                <li>
-                    <p>Click en <code>Add</code>.</p>
-                </li>
-                <li>
-                    <p>Configurar los parámetros:</p>
-                </li>
-                <li>
-                    <p><strong>Server Mode:</strong> Remote Access (SSL/TLS)</p>
-                </li>
-                <li>
-                    <p><strong>Backend for authentication:</strong> Local Database</p>
-                </li>
-                <li>
-                    <p><strong>Protocol:</strong> UDP</p>
-                </li>
-                <li>
-                    <p><strong>Interface:</strong> WAN</p>
-                </li>
-                <li>
-                    <p><strong>Local Port:</strong> 1194</p>
-                </li>
-                <li>
-                    <p><strong>TLS Authentication:</strong> Enable</p>
-                </li>
-                <li>
-                    <p><strong>Peer Certificate Authority:</strong> VPN_CA</p>
-                </li>
-                <li>
-                    <p><strong>Server Certificate:</strong> OpenVPN_Server</p>
-                </li>
-                <li>
-                    <p><strong>Encryption Algorithm:</strong> AES-256-CBC</p>
-                </li>
-                <li>
-                    <p><strong>Auth Digest Algorithm:</strong> SHA256</p>
-                </li>
-                <li>
-                    <p><strong>Tunnel Network:</strong> <a href="http://10.8.0.0/24">10.8.0.0/24</a></p>
-                </li>
-                <li>
-                    <p><strong>Local Network:</strong> (<a href="http://192.168.1.0/24">192.168.1.0/24</a>)</p>
-                </li>
-                <li>
-                    <p>Guardar y aplicar los cambios.</p>
-                </li>
-            </ol>
-            <hr>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf-G9xeVYxQv9R69Hnp5P3eSzdOLRx_zr5R2zavUxhsj7ChiQQUi-vVI98g2TB8bEucyfBiFy8ioFri-hl2VOS2yEbKFN9BEnoS4f9gxtvo-MsKy3nlTUvO0G4szX1_-OgVSIf6Pw?key=_YQlVURTdgHza7i-ocS-hCXB"
-                    alt=""></p>
-            <h4 id="-paso-5-crear-usuarios-y-certificados">Paso 5: Crear Usuarios y Certificados</h4>
-            <ol>
-                <li>
-                    <p>Ir a <code>System &gt; User Manager &gt; Users</code>.</p>
-                </li>
-                <li>
-                    <p>Click en <code>Add</code>.</p>
-                </li>
-                <li>
-                    <p>Crear un nuevo usuario y marcar la opción <code>Click to create a user certificate</code>.</p>
-                </li>
-                <li>
-                    <p>Seleccionar la CA <code>VPN_CA</code> y emitir el certificado.</p>
-                </li>
-            </ol>
-            <p>—</p>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfhYRQ8qLg4-EUZ3rT3C8pG4ITLAh_1tuheabH2ZxkK1nZs2ZjoDC-3w6FUG5vFJ2VYjxlAJtv73OpnvT5MYezGEXZkoLK2Ti1VfaLX55saTbFY_TjtOdY6bgN_YaOdkI5C2C1kXw?key=_YQlVURTdgHza7i-ocS-hCXB"
-                    alt=""></p>
-            <h4 id="-paso-6-configurar-reglas-de-firewall">Paso 6: Configurar Reglas de Firewall</h4>
-            <ol>
-                <li>
-                    <p>Ir a <code>Firewall &gt; Rules &gt; WAN</code>.</p>
-                </li>
-                <li>
-                    <p>Añadir una regla:</p>
-                </li>
-                <li>
-                    <p><strong>Action:</strong> Pass</p>
-                </li>
-                <li>
-                    <p><strong>Protocol:</strong> UDP</p>
-                </li>
-                <li>
-                    <p><strong>Destination Port:</strong> 1194</p>
-                </li>
-                <li>
-                    <p><strong>Description:</strong> Allow OpenVPN</p>
-                </li>
-            </ol>
-            <ol>
-                <li>
-                    <p>Ir a <code>Firewall &gt; Rules &gt; OpenVPN</code>.</p>
-                </li>
-                <li>
-                    <p>Añadir una regla:</p>
-                </li>
-                <li>
-                    <p><strong>Action:</strong> Pass</p>
-                </li>
-                <li>
-                    <p><strong>Source:</strong> any</p>
-                </li>
-                <li>
-                    <p><strong>Destination:</strong> (<a href="http://192.168.1.0/24">192.168.1.0/24</a>)</p>
-                </li>
-                <li>
-                    <p><strong>Description:</strong> Allow VPN Clients</p>
-                </li>
-            </ol>
-            <hr>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcADhhQHBNyZ6l8b1KizgrDDZSRRabUV3OY1GHHdOdFQsV9N_xqcAsaPlQTp0FDXmKjnWfBTMjp6ynrzfKfMdLyDDZqM0UnuXl4KTciAafCoVs11hMjGMAMDKK740fkalRcW35a4w?key=_YQlVURTdgHza7i-ocS-hCXB"
-                    alt=""></p>
-            <h4 id="-paso-7-exportar-la-configuraci-n-del-cliente">Paso 7: Exportar la Configuración del Cliente</h4>
-            <ol>
-                <li>
-                    <p>Ir a <code>VPN &gt; OpenVPN &gt; Client Export</code>.</p>
-                </li>
-                <li>
-                    <p>Seleccionar el usuario.</p>
-                </li>
-                <li>
-                    <p>Descargar el instalador o archivo de configuración para su sistema operativo.</p>
-                </li>
-            </ol>
-            <hr>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeE2SOAivHJbI4tuArpHgmi0eyDf095Ola0vkVJVbX14JtbKPATBrbmIWbCqpNF6-0vyyTsdvP6jg2i42ZEfWMYap7MdLJTvPjCiik7lh2N4MROzw2WFqNSX301TDEpBxHrVNsW3g?key=_YQlVURTdgHza7i-ocS-hCXB"
-                    alt=""></p>
-            <h4 id="-paso-8-conectarse-desde-el-cliente">Paso 8: Conectarse desde el Cliente</h4>
-            <ol>
-                <li>
-                    <p>Instalar OpenVPN Client en el dispositivo del usuario.</p>
-                </li>
-                <li>
-                    <p>Importar el archivo <code>.ovpn</code> o usar el instalador.</p>
-                </li>
-                <li>
-                    <p>Conectarse al servidor.</p>
-                </li>
-            </ol><br>
+        <h3 id="openvpn">OPENVPN</h3>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcOHUxl-NYzm6SaOlTA_hBRIePMjmvDIeVfpjhk9D2gUwKXj3vDzJQYg8TYEStVHLjMymahMdsgzPtyl16uAS8q7IaxrBAJmPUyVvGi7E29diZGI8nQ9wPXHSZ4IapBgK1O_KME1w?key=n5Zz2_nBbhiRtzRnN8z2yg"
+                alt="" width="250" height="250"></p>
+        <h4 id="-requisitos">Requisitos</h4>
+        <ul>
+            <li>
+                <p>Una instalación funcional de pfSense (v2.4 o superior recomendado)</p>
+            </li>
+            <li>
+                <p>Acceso administrativo a pfSense</p>
+            </li>
+            <li>
+                <p>Un cliente VPN compatible (OpenVPN Client para Windows, macOS, Linux, Android, etc.)</p>
+            </li>
+        </ul>
+        <hr>
+        <h4 id="-paso-1-instalar-el-paquete-de-openvpn">Paso 1: Instalar el paquete de OpenVPN</h4>
+        <ol>
+            <li>
+                <p>Ir a <code>System &gt; Package Manager &gt; Available Packages</code>.</p>
+            </li>
+            <li>
+                <p>Buscar <code>openvpn-client-export</code>.</p>
+            </li>
+            <li>
+                <p>Instalar el paquete.</p>
+            </li>
+        </ol>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXefI-IBbq9YwypghvtqZ7XbjeX3tjs_kBgCUCZPD5P5hyL38sKhUjIDxdm0Kc-N5r3D7YTE2877wt-GweUPMQ4Uv5l9OKemg2AIYRQ3PM0Y_rTalNsjeLbwYQSlmAiTQ6tXKhqU?key=_YQlVURTdgHza7i-ocS-hCXB"
+                alt=""></p>
+        <hr>
+        <h4 id="-paso-2-crear-una-autoridad-certificadora-ca-">Paso 2: Crear una Autoridad Certificadora (CA)
+        </h4>
+        <ol>
+            <li>
+                <p>Ir a <code>System &gt; Cert. Manager &gt; CAs</code>.</p>
+            </li>
+            <li>
+                <p>Click en <code>Add</code>.</p>
+            </li>
+            <li>
+                <p>Llenar los campos:</p>
+            </li>
+            <li>
+                <p><strong>Descriptive Name:</strong> <code>VPN_CA</code></p>
+            </li>
+            <li>
+                <p><strong>Method:</strong> Create an internal Certificate Authority</p>
+            </li>
+            <li>
+                <p>Rellenar los campos de país, estado, ciudad, etc.</p>
+            </li>
+            <li>
+                <p>Guardar.</p>
+            </li>
+        </ol>
+        <hr>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXd8cbMTbx3ja2U-JxPsaFtc3Vi4qWQ1_B3T3A5ScCTsA3Op9awhTySMbOf9ejKWnH5360vj50ujeQe8iIN4n5vHNLW6ESLzbSK2zWhzvHS8ORilgBsZj7SCcq2oIvuEt0KSOp5XPw?key=_YQlVURTdgHza7i-ocS-hCXB"
+                alt=""></p>
+        <h4 id="-paso-3-crear-el-certificado-del-servidor">Paso 3: Crear el Certificado del Servidor</h4>
+        <ol>
+            <li>
+                <p>Ir a <code>System &gt; Cert. Manager &gt; Certificates</code>.</p>
+            </li>
+            <li>
+                <p>Click en <code>Add/Sign</code>.</p>
+            </li>
+            <li>
+                <p>Llenar los campos:</p>
+            </li>
+            <li>
+                <p><strong>Method:</strong> Create an internal certificate</p>
+            </li>
+            <li>
+                <p><strong>Descriptive Name:</strong> <code>OpenVPN_Server</code></p>
+            </li>
+            <li>
+                <p><strong>Certificate Type:</strong> Server Certificate</p>
+            </li>
+            <li>
+                <p>Seleccionar la CA creada anteriormente</p>
+            </li>
+            <li>
+                <p>Rellenar los datos requeridos</p>
+            </li>
+            <li>
+                <p>Guardar.</p>
+            </li>
+        </ol>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcYIr6d8_ORN79nfRmXzzGUCqHOusni7zGTIYg8WTznb8J84Z1CmP835H42MwDd38jHm1XzqJOxxslEUY-J5BhRlzxP8ymJmpeCA3DH88Grw66eA00iSrtKKsb3EO3gENyZmMGJ-w?key=_YQlVURTdgHza7i-ocS-hCXB"
+                alt=""></p>
+        <hr>
+        <h4 id="-paso-4-crear-el-servidor-openvpn">Paso 4: Crear el Servidor OpenVPN</h4>
+        <ol>
+            <li>
+                <p>Ir a <code>VPN &gt; OpenVPN &gt; Servers</code>.</p>
+            </li>
+            <li>
+                <p>Click en <code>Add</code>.</p>
+            </li>
+            <li>
+                <p>Configurar los parámetros:</p>
+            </li>
+            <li>
+                <p><strong>Server Mode:</strong> Remote Access (SSL/TLS)</p>
+            </li>
+            <li>
+                <p><strong>Backend for authentication:</strong> Local Database</p>
+            </li>
+            <li>
+                <p><strong>Protocol:</strong> UDP</p>
+            </li>
+            <li>
+                <p><strong>Interface:</strong> WAN</p>
+            </li>
+            <li>
+                <p><strong>Local Port:</strong> 1194</p>
+            </li>
+            <li>
+                <p><strong>TLS Authentication:</strong> Enable</p>
+            </li>
+            <li>
+                <p><strong>Peer Certificate Authority:</strong> VPN_CA</p>
+            </li>
+            <li>
+                <p><strong>Server Certificate:</strong> OpenVPN_Server</p>
+            </li>
+            <li>
+                <p><strong>Encryption Algorithm:</strong> AES-256-CBC</p>
+            </li>
+            <li>
+                <p><strong>Auth Digest Algorithm:</strong> SHA256</p>
+            </li>
+            <li>
+                <p><strong>Tunnel Network:</strong> <a href="http://10.8.0.0/24">10.8.0.0/24</a></p>
+            </li>
+            <li>
+                <p><strong>Local Network:</strong> (<a href="http://192.168.1.0/24">192.168.1.0/24</a>)</p>
+            </li>
+            <li>
+                <p>Guardar y aplicar los cambios.</p>
+            </li>
+        </ol>
+        <hr>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXf-G9xeVYxQv9R69Hnp5P3eSzdOLRx_zr5R2zavUxhsj7ChiQQUi-vVI98g2TB8bEucyfBiFy8ioFri-hl2VOS2yEbKFN9BEnoS4f9gxtvo-MsKy3nlTUvO0G4szX1_-OgVSIf6Pw?key=_YQlVURTdgHza7i-ocS-hCXB"
+                alt=""></p>
+        <h4 id="-paso-5-crear-usuarios-y-certificados">Paso 5: Crear Usuarios y Certificados</h4>
+        <ol>
+            <li>
+                <p>Ir a <code>System &gt; User Manager &gt; Users</code>.</p>
+            </li>
+            <li>
+                <p>Click en <code>Add</code>.</p>
+            </li>
+            <li>
+                <p>Crear un nuevo usuario y marcar la opción <code>Click to create a user certificate</code>.</p>
+            </li>
+            <li>
+                <p>Seleccionar la CA <code>VPN_CA</code> y emitir el certificado.</p>
+            </li>
+        </ol>
+        <p>—</p>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfhYRQ8qLg4-EUZ3rT3C8pG4ITLAh_1tuheabH2ZxkK1nZs2ZjoDC-3w6FUG5vFJ2VYjxlAJtv73OpnvT5MYezGEXZkoLK2Ti1VfaLX55saTbFY_TjtOdY6bgN_YaOdkI5C2C1kXw?key=_YQlVURTdgHza7i-ocS-hCXB"
+                alt=""></p>
+        <h4 id="-paso-6-configurar-reglas-de-firewall">Paso 6: Configurar Reglas de Firewall</h4>
+        <ol>
+            <li>
+                <p>Ir a <code>Firewall &gt; Rules &gt; WAN</code>.</p>
+            </li>
+            <li>
+                <p>Añadir una regla:</p>
+            </li>
+            <li>
+                <p><strong>Action:</strong> Pass</p>
+            </li>
+            <li>
+                <p><strong>Protocol:</strong> UDP</p>
+            </li>
+            <li>
+                <p><strong>Destination Port:</strong> 1194</p>
+            </li>
+            <li>
+                <p><strong>Description:</strong> Allow OpenVPN</p>
+            </li>
+        </ol>
+        <ol>
+            <li>
+                <p>Ir a <code>Firewall &gt; Rules &gt; OpenVPN</code>.</p>
+            </li>
+            <li>
+                <p>Añadir una regla:</p>
+            </li>
+            <li>
+                <p><strong>Action:</strong> Pass</p>
+            </li>
+            <li>
+                <p><strong>Source:</strong> any</p>
+            </li>
+            <li>
+                <p><strong>Destination:</strong> (<a href="http://192.168.1.0/24">192.168.1.0/24</a>)</p>
+            </li>
+            <li>
+                <p><strong>Description:</strong> Allow VPN Clients</p>
+            </li>
+        </ol>
+        <hr>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcADhhQHBNyZ6l8b1KizgrDDZSRRabUV3OY1GHHdOdFQsV9N_xqcAsaPlQTp0FDXmKjnWfBTMjp6ynrzfKfMdLyDDZqM0UnuXl4KTciAafCoVs11hMjGMAMDKK740fkalRcW35a4w?key=_YQlVURTdgHza7i-ocS-hCXB"
+                alt=""></p>
+        <h4 id="-paso-7-exportar-la-configuraci-n-del-cliente">Paso 7: Exportar la Configuración del Cliente</h4>
+        <ol>
+            <li>
+                <p>Ir a <code>VPN &gt; OpenVPN &gt; Client Export</code>.</p>
+            </li>
+            <li>
+                <p>Seleccionar el usuario.</p>
+            </li>
+            <li>
+                <p>Descargar el instalador o archivo de configuración para su sistema operativo.</p>
+            </li>
+        </ol>
+        <hr>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeE2SOAivHJbI4tuArpHgmi0eyDf095Ola0vkVJVbX14JtbKPATBrbmIWbCqpNF6-0vyyTsdvP6jg2i42ZEfWMYap7MdLJTvPjCiik7lh2N4MROzw2WFqNSX301TDEpBxHrVNsW3g?key=_YQlVURTdgHza7i-ocS-hCXB"
+                alt=""></p>
+        <h4 id="-paso-8-conectarse-desde-el-cliente">Paso 8: Conectarse desde el Cliente</h4>
+        <ol>
+            <li>
+                <p>Instalar OpenVPN Client en el dispositivo del usuario.</p>
+            </li>
+            <li>
+                <p>Importar el archivo <code>.ovpn</code> o usar el instalador.</p>
+            </li>
+            <li>
+                <p>Conectarse al servidor.</p>
+            </li>
+        </ol><br>
 
-            <h3 id="monitorizaci-n-con-prometheus-node-exporter-grafana">Monitorización con Prometheus + Node Exporter +
-                Grafana</h3>
-            <hr>
-            <h3 id="1-qu-hay-instalado-y-configurado-">1. ¿Qué hay instalado y configurado?</h3>
-            <h4 id="1-1-node-exporter-en-el-cliente-">1.1 Node Exporter (en el cliente)</h4>
-            <ul>
-                <li>Ubicación: Máquina cliente (host físico o virtual). </li>
-            </ul>
-            <ul>
-                <li>Función: Exporta métricas del sistema operativo (CPU, memoria, disco, etc.). </li>
-            </ul>
-            <ul>
-                <li>Modo de ejecución: Se ejecuta como servicio con systemd, en segundo plano. </li>
-            </ul>
-            <ul>
-                <li>Puerto por defecto: 9100 </li>
-            </ul>
-            <h4
-                id="1-2-prometheus-en-contenedor-https-lh7-rt-googleusercontent-com-docsz-ad_4nxfnymcal7dqfwnpz8jp9cl2tgeznm_sdwnvgjjfaxh97z2dskube0b5oj3dunhxxmkanoswgwtafxwxyqjchyfi6uiukkae8zz8wtbocm4vsqzromhvyuekxfkc-nyga2uyqtjyta-key-iz1zuhzn8nd_clul3dntp5rt-">
-                1.2 Prometheus (en contenedor)<img
-                    src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfNymcal7dqfwnpz8jP9CL2tgeZnm_sdWNVGjjfaxH97Z2dSkUbe0B5OJ3dunHxxmkanoSwgwTaFXwXYqjchyfI6UIuKkAE8zz8wtBocm4vSQZRomhvyUEkxfKc-nyga2uyQtJytA?key=iZ1zUHzN8nd_clul3dNtp5rT"
-                    width="250" height="250" alt=""></h4>
-            <ul>
-                <li>Ubicación: Contenedor Linux junto con Grafana con IP 192.168.2.7 </li>
-            </ul>
-            <ul>
-                <li>Función: Recoge y almacena métricas desde los exporters (como Node Exporter). </li>
-            </ul>
-            <ul>
-                <li>Configuración clave: El fichero prometheus.yml contiene los targets, incluyendo la IP del cliente
-                    con Node Exporter. </li>
-            </ul>
-            <ul>
-                <li>Puerto por defecto: 9090 </li>
-            </ul>
-            <h4
-                id="1-3-grafana-en-contenedor-https-lh7-rt-googleusercontent-com-docsz-ad_4nxcqqqz1dy-kpoadm2nco1rrdvwwlcg5ay-lh_5ye3vf6yrmuxyt5ycs8qnmxwsfd7ye89kbjurxbkbmrutqoahq_ksf_-1buzvkdn7lmqsupsh1yq617mkqkexdd9ksldy-vunmlw-key-iz1zuhzn8nd_clul3dntp5rt-">
-                1.3 Grafana (en contenedor)<img
-                    src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcQQqz1DY-KPOadM2NcO1rrDVWWlCg5aY-lh_5yE3VF6yRMUXyT5Ycs8qNmxwsFD7ye89kbjurXBKbmRUtqOAhQ_kSF_-1BUzVKDn7LmqSUpsh1yQ617MKQkeXDd9KSldy-vunMlw?key=iZ1zUHzN8nd_clul3dNtp5rT"
-                    width="250" height="250" alt=""></h4>
-            <ul>
-                <li>Ubicación: Máquina llamada Grafana con IP 192.168.2.7 </li>
-            </ul>
-            <ul>
-                <li>Función: Visualiza las métricas almacenadas en Prometheus mediante dashboards. </li>
-            </ul>
-            <ul>
-                <li>Puerto por defecto: 3000 </li>
-            </ul>
-            <ul>
-                <li>Acceso externo: Se ha realizado una redirección de puertos en pfSense, mapeando el puerto 3000 LAN
-                    al 3000 WAN, lo que permite el acceso remoto a la interfaz web de Grafana.</li>
-            </ul>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcjytvSXTqijOkm5lKdwVXpaeDXDxA2hPtJQ9b0TMzTtJWda_hzA2uKhfX0tXIun7u2NcVyro-R_rKvmHsTRu-CorXY64Fw-ESs2vxrc63OvxX3qEG1-tI7nGyqNA4f2pawYK9m-w?key=iZ1zUHzN8nd_clul3dNtp5rT"
-                    alt=""></p>
-            <hr>
-            <h3 id="2-dashboards-y-gr-ficos">2. Dashboards y Gráficos</h3>
-            <h4 id="dashboards-creados-">Dashboards creados:</h4>
-            <p>Se han creado y configurado tres dashboards básicos para la visualización en Grafana:</p>
-            <ul>
-                <li>CPU Usage: Muestra el porcentaje de uso de CPU en el tiempo.</li>
-            </ul>
-            <ul>
-                <li>Memory Usage: Indica uso y disponibilidad de memoria RAM.</li>
-            </ul>
-            <ul>
-                <li>Filesystem Usage: Espacio usado por las particiones del sistema.</li>
-            </ul>
+        <h3 id="monitorizaci-n-con-prometheus-node-exporter-grafana">Monitorización con Prometheus + Node Exporter +
+            Grafana</h3>
+        <hr>
+        <h3 id="1-qu-hay-instalado-y-configurado-">1. ¿Qué hay instalado y configurado?</h3>
+        <h4 id="1-1-node-exporter-en-el-cliente-">1.1 Node Exporter (en el cliente)</h4>
+        <ul>
+            <li>Ubicación: Máquina cliente (host físico o virtual). </li>
+        </ul>
+        <ul>
+            <li>Función: Exporta métricas del sistema operativo (CPU, memoria, disco, etc.). </li>
+        </ul>
+        <ul>
+            <li>Modo de ejecución: Se ejecuta como servicio con systemd, en segundo plano. </li>
+        </ul>
+        <ul>
+            <li>Puerto por defecto: 9100 </li>
+        </ul>
+        <h4
+            id="1-2-prometheus-en-contenedor-https-lh7-rt-googleusercontent-com-docsz-ad_4nxfnymcal7dqfwnpz8jp9cl2tgeznm_sdwnvgjjfaxh97z2dskube0b5oj3dunhxxmkanoswgwtafxwxyqjchyfi6uiukkae8zz8wtbocm4vsqzromhvyuekxfkc-nyga2uyqtjyta-key-iz1zuhzn8nd_clul3dntp5rt-">
+            1.2 Prometheus (en contenedor)<img
+                src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXfNymcal7dqfwnpz8jP9CL2tgeZnm_sdWNVGjjfaxH97Z2dSkUbe0B5OJ3dunHxxmkanoSwgwTaFXwXYqjchyfI6UIuKkAE8zz8wtBocm4vSQZRomhvyUEkxfKc-nyga2uyQtJytA?key=iZ1zUHzN8nd_clul3dNtp5rT"
+                width="250" height="250" alt=""></h4>
+        <ul>
+            <li>Ubicación: Contenedor Linux junto con Grafana con IP 192.168.2.7 </li>
+        </ul>
+        <ul>
+            <li>Función: Recoge y almacena métricas desde los exporters (como Node Exporter). </li>
+        </ul>
+        <ul>
+            <li>Configuración clave: El fichero prometheus.yml contiene los targets, incluyendo la IP del cliente
+                con Node Exporter. </li>
+        </ul>
+        <ul>
+            <li>Puerto por defecto: 9090 </li>
+        </ul>
+        <h4
+            id="1-3-grafana-en-contenedor-https-lh7-rt-googleusercontent-com-docsz-ad_4nxcqqqz1dy-kpoadm2nco1rrdvwwlcg5ay-lh_5ye3vf6yrmuxyt5ycs8qnmxwsfd7ye89kbjurxbkbmrutqoahq_ksf_-1buzvkdn7lmqsupsh1yq617mkqkexdd9ksldy-vunmlw-key-iz1zuhzn8nd_clul3dntp5rt-">
+            1.3 Grafana (en contenedor)<img
+                src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcQQqz1DY-KPOadM2NcO1rrDVWWlCg5aY-lh_5yE3VF6yRMUXyT5Ycs8qNmxwsFD7ye89kbjurXBKbmRUtqOAhQ_kSF_-1BUzVKDn7LmqSUpsh1yQ617MKQkeXDd9KSldy-vunMlw?key=iZ1zUHzN8nd_clul3dNtp5rT"
+                width="250" height="250" alt=""></h4>
+        <ul>
+            <li>Ubicación: Máquina llamada Grafana con IP 192.168.2.7 </li>
+        </ul>
+        <ul>
+            <li>Función: Visualiza las métricas almacenadas en Prometheus mediante dashboards. </li>
+        </ul>
+        <ul>
+            <li>Puerto por defecto: 3000 </li>
+        </ul>
+        <ul>
+            <li>Acceso externo: Se ha realizado una redirección de puertos en pfSense, mapeando el puerto 3000 LAN
+                al 3000 WAN, lo que permite el acceso remoto a la interfaz web de Grafana.</li>
+        </ul>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXcjytvSXTqijOkm5lKdwVXpaeDXDxA2hPtJQ9b0TMzTtJWda_hzA2uKhfX0tXIun7u2NcVyro-R_rKvmHsTRu-CorXY64Fw-ESs2vxrc63OvxX3qEG1-tI7nGyqNA4f2pawYK9m-w?key=iZ1zUHzN8nd_clul3dNtp5rT"
+                alt=""></p>
+        <hr>
+        <h3 id="2-dashboards-y-gr-ficos">2. Dashboards y Gráficos</h3>
+        <h4 id="dashboards-creados-">Dashboards creados:</h4>
+        <p>Se han creado y configurado tres dashboards básicos para la visualización en Grafana:</p>
+        <ul>
+            <li>CPU Usage: Muestra el porcentaje de uso de CPU en el tiempo.</li>
+        </ul>
+        <ul>
+            <li>Memory Usage: Indica uso y disponibilidad de memoria RAM.</li>
+        </ul>
+        <ul>
+            <li>Filesystem Usage: Espacio usado por las particiones del sistema.</li>
+        </ul>
 
-            <h3 id="roles-de-proxmox">Roles de Proxmox</h3>
-            <h3 id="rol-de-alumno">Rol de alumno</h3>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeNL6CRhhZ3u2_CSmGZwT46HGBwMPXO25jSW92SuSU0Whi3k3nCJ_3ZK2B8SBzoMx5n9MnINItc17QT2lO5jlpSuL2M1gS0vv4LpVmz761YlyAj6-4I0aMGh_7N0L5wHTXsInA2Ag?key=WDvmN8vPYcU6kwrHqV-tBhuD"
-                    alt=""></p>
-            <h3 id="1-datastore-allocatetemplate">1. Datastore.AllocateTemplate</h3>
-            <p>Permite crear plantillas de máquina virtual (VM Templates) en un datastore. Esto es para la clonación o
-                despliegue rápido de VMs.</p>
-            <h3 id="2-vm-audit">2. VM.Audit</h3>
-            <p>Permite ver detalles y configuración de las máquinas virtuales, sin modificarlas. Es un rol de solo
-                lectura orientado a auditorías.</p>
-            <h3 id="3-vm-console">3. VM.Console</h3>
-            <p>Permite acceder a la consola remota de una máquina virtual, como si estuvieras físicamente frente a la
-                pantalla del sistema invitado (guest OS).</p>
-            <h3 id="4-vm-allocate">4. VM.Allocate</h3>
-            <p>Permite crear nuevas máquinas virtuales. Es un permiso base necesario para que un usuario pueda desplegar
-                o registrar nuevas VMs.</p>
-            <h3 id="5-vm-powermgmt">5. VM.PowerMgmt</h3>
-            <p>Permite encender, apagar, reiniciar y suspender máquinas virtuales. Es esencial para la gestión del ciclo
-                de vida de la VM.</p>
-            <h3 id="6-datastore-allocatespace">6. Datastore.AllocateSpace</h3>
-            <p>Permite asignar espacio en un datastore, por ejemplo, al crear discos virtuales (VMDK) para nuevas VMs.
-            </p>
-            <h3 id="7-datastore-allocate">7. Datastore.Allocate</h3>
-            <p>Permite crear y registrar nuevos objetos en un datastore, como máquinas virtuales, archivos ISO o
-                plantillas. Puede solaparse con Datastore.AllocateTemplate pero es más general.</p>
-            <h3 id="rol-de-profesor">Rol de Profesor</h3>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdUaei417bI0p9A_zdcav_FygqwXko3-9D7hb76rZwxNzQows3ylyvUduNmk_Ky_WR4-xzJsKCTCYwWm_lvkFtZ9SK_ks2JdFLe0nT7kYhk6s5pH_a4KjrxVwwj2i7AdHc757y0?key=WDvmN8vPYcU6kwrHqV-tBhuD"
-                    alt="" width="1000"></p>
-            <ol>
-                <li>VM.Migrate<br>Permite migrar una máquina virtual entre hosts o datastores (por ejemplo, vMotion y
-                    Storage vMotion). </li>
-            </ol>
-            <ol>
-                <li>VM.Allocate<br>Permite crear o registrar nuevas VMs en el entorno. </li>
-            </ol>
-            <ol>
-                <li>VM.Clone<br>Permite clonar una VM existente, ya sea como VM nueva o como plantilla. </li>
-            </ol>
-            <ol>
-                <li>VM.Audit<br>Permite ver detalles y configuración de VMs (modo lectura, sin modificar nada). </li>
-            </ol>
-            <ol>
-                <li>VM.PowerMgmt<br>Permite encender, apagar, reiniciar o suspender una VM. </li>
-            </ol>
-            <ol>
-                <li>VM.Snapshot<br>Permite crear snapshots de una máquina virtual. </li>
-            </ol>
-            <ol>
-                <li>VM.Snapshot.Rollback<br>Permite restaurar una VM a un estado anterior usando un snapshot. </li>
-            </ol>
-            <ol>
-                <li>VM.Console<br>Permite acceder a la consola de la VM, como si usaras un teclado/pantalla
-                    directamente.</li>
-            </ol>
-            <hr>
-            <p>Permisos de Configuración de la VM</p>
-            <ol>
-                <li>VM.Config.CPU<br>Permite cambiar la cantidad de CPUs asignadas a una VM. </li>
-            </ol>
-            <ol>
-                <li>VM.Config.Memory<br>Permite cambiar la cantidad de memoria RAM asignada a una VM. </li>
-            </ol>
-            <ol>
-                <li>VM.Config.Options<br>Permite modificar las opciones avanzadas de configuración de una VM (como flags
-                    o compatibilidad de hardware). </li>
-            </ol>
-            <ol>
-                <li>VM.Config.HWType<br>Permite cambiar el tipo de hardware virtual de la VM (por ejemplo, versión de VM
-                    Hardware 13 a 15). </li>
-            </ol>
-            <ol>
-                <li>VM.Config.Disk<br>Permite añadir, quitar o cambiar discos virtuales (VMDK) en una VM. </li>
-            </ol>
-            <hr>
-            <h3 id="permisos-sobre-datastores">Permisos sobre Datastores</h3>
-            <ol>
-                <li>Datastore.AllocateSpace<br>Permite usar espacio del datastore para cosas como discos virtuales o
-                    snapshots. </li>
-            </ol>
-            <ol>
-                <li>Datastore.Allocate<br>Permite crear o registrar objetos (como VMs o archivos ISO) en el datastore.
-                </li>
-            </ol>
-            <ol>
-                <li>Datastore.Audit<br>Permite ver los contenidos del datastore, como archivos, carpetas, espacio
-                    disponible, etc. </li>
-            </ol>
-            <hr>
-            <h3 id="permisos-sobre-resource-pools">Permisos sobre Resource Pools</h3>
-            <ol>
-                <li>Pool.Allocate<br>Permite crear y asignar recursos en resource pools (CPU y memoria compartida entre
-                    VMs). </li>
-            </ol>
-            <ol>
-                <li>Pool.Audit<br>Permite ver información de los resource pools (modo lectura).</li>
-            </ol>
-            <h3 id="rol-de-admin">Rol de Admin</h3>
-            <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXddTJdhJKbHXNZz5jzU0J4k-BqYH1IO2zle07PIAV86aAQlWdMw9Hl9LB-z6UgI0X-2Tc9mbKp4qRsssJ8akrPb5ToOiWI_64qahgMDJBEWhjVWBILuT5k4ugKDi72xV-53WLg1AQ?key=WDvmN8vPYcU6kwrHqV-tBhuD"
-                    alt="" width="1000">></p>
-            <p>Admin puede hacer todo lo anterior mas otras gestiones de seguridad.</p><br>
+        <h3 id="roles-de-proxmox">Roles de Proxmox</h3>
+        <h3 id="rol-de-alumno">Rol de alumno</h3>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXeNL6CRhhZ3u2_CSmGZwT46HGBwMPXO25jSW92SuSU0Whi3k3nCJ_3ZK2B8SBzoMx5n9MnINItc17QT2lO5jlpSuL2M1gS0vv4LpVmz761YlyAj6-4I0aMGh_7N0L5wHTXsInA2Ag?key=WDvmN8vPYcU6kwrHqV-tBhuD"
+                alt=""></p>
+        <h3 id="1-datastore-allocatetemplate">1. Datastore.AllocateTemplate</h3>
+        <p>Permite crear plantillas de máquina virtual (VM Templates) en un datastore. Esto es para la clonación o
+            despliegue rápido de VMs.</p>
+        <h3 id="2-vm-audit">2. VM.Audit</h3>
+        <p>Permite ver detalles y configuración de las máquinas virtuales, sin modificarlas. Es un rol de solo
+            lectura orientado a auditorías.</p>
+        <h3 id="3-vm-console">3. VM.Console</h3>
+        <p>Permite acceder a la consola remota de una máquina virtual, como si estuvieras físicamente frente a la
+            pantalla del sistema invitado (guest OS).</p>
+        <h3 id="4-vm-allocate">4. VM.Allocate</h3>
+        <p>Permite crear nuevas máquinas virtuales. Es un permiso base necesario para que un usuario pueda desplegar
+            o registrar nuevas VMs.</p>
+        <h3 id="5-vm-powermgmt">5. VM.PowerMgmt</h3>
+        <p>Permite encender, apagar, reiniciar y suspender máquinas virtuales. Es esencial para la gestión del ciclo
+            de vida de la VM.</p>
+        <h3 id="6-datastore-allocatespace">6. Datastore.AllocateSpace</h3>
+        <p>Permite asignar espacio en un datastore, por ejemplo, al crear discos virtuales (VMDK) para nuevas VMs.
+        </p>
+        <h3 id="7-datastore-allocate">7. Datastore.Allocate</h3>
+        <p>Permite crear y registrar nuevos objetos en un datastore, como máquinas virtuales, archivos ISO o
+            plantillas. Puede solaparse con Datastore.AllocateTemplate pero es más general.</p>
+        <h3 id="rol-de-profesor">Rol de Profesor</h3>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdUaei417bI0p9A_zdcav_FygqwXko3-9D7hb76rZwxNzQows3ylyvUduNmk_Ky_WR4-xzJsKCTCYwWm_lvkFtZ9SK_ks2JdFLe0nT7kYhk6s5pH_a4KjrxVwwj2i7AdHc757y0?key=WDvmN8vPYcU6kwrHqV-tBhuD"
+                alt="" width="1000"></p>
+        <ol>
+            <li>VM.Migrate<br>Permite migrar una máquina virtual entre hosts o datastores (por ejemplo, vMotion y
+                Storage vMotion). </li>
+        </ol>
+        <ol>
+            <li>VM.Allocate<br>Permite crear o registrar nuevas VMs en el entorno. </li>
+        </ol>
+        <ol>
+            <li>VM.Clone<br>Permite clonar una VM existente, ya sea como VM nueva o como plantilla. </li>
+        </ol>
+        <ol>
+            <li>VM.Audit<br>Permite ver detalles y configuración de VMs (modo lectura, sin modificar nada). </li>
+        </ol>
+        <ol>
+            <li>VM.PowerMgmt<br>Permite encender, apagar, reiniciar o suspender una VM. </li>
+        </ol>
+        <ol>
+            <li>VM.Snapshot<br>Permite crear snapshots de una máquina virtual. </li>
+        </ol>
+        <ol>
+            <li>VM.Snapshot.Rollback<br>Permite restaurar una VM a un estado anterior usando un snapshot. </li>
+        </ol>
+        <ol>
+            <li>VM.Console<br>Permite acceder a la consola de la VM, como si usaras un teclado/pantalla
+                directamente.</li>
+        </ol>
+        <hr>
+        <p>Permisos de Configuración de la VM</p>
+        <ol>
+            <li>VM.Config.CPU<br>Permite cambiar la cantidad de CPUs asignadas a una VM. </li>
+        </ol>
+        <ol>
+            <li>VM.Config.Memory<br>Permite cambiar la cantidad de memoria RAM asignada a una VM. </li>
+        </ol>
+        <ol>
+            <li>VM.Config.Options<br>Permite modificar las opciones avanzadas de configuración de una VM (como flags
+                o compatibilidad de hardware). </li>
+        </ol>
+        <ol>
+            <li>VM.Config.HWType<br>Permite cambiar el tipo de hardware virtual de la VM (por ejemplo, versión de VM
+                Hardware 13 a 15). </li>
+        </ol>
+        <ol>
+            <li>VM.Config.Disk<br>Permite añadir, quitar o cambiar discos virtuales (VMDK) en una VM. </li>
+        </ol>
+        <hr>
+        <h3 id="permisos-sobre-datastores">Permisos sobre Datastores</h3>
+        <ol>
+            <li>Datastore.AllocateSpace<br>Permite usar espacio del datastore para cosas como discos virtuales o
+                snapshots. </li>
+        </ol>
+        <ol>
+            <li>Datastore.Allocate<br>Permite crear o registrar objetos (como VMs o archivos ISO) en el datastore.
+            </li>
+        </ol>
+        <ol>
+            <li>Datastore.Audit<br>Permite ver los contenidos del datastore, como archivos, carpetas, espacio
+                disponible, etc. </li>
+        </ol>
+        <hr>
+        <h3 id="permisos-sobre-resource-pools">Permisos sobre Resource Pools</h3>
+        <ol>
+            <li>Pool.Allocate<br>Permite crear y asignar recursos en resource pools (CPU y memoria compartida entre
+                VMs). </li>
+        </ol>
+        <ol>
+            <li>Pool.Audit<br>Permite ver información de los resource pools (modo lectura).</li>
+        </ol>
+        <h3 id="rol-de-admin">Rol de Admin</h3>
+        <p><img src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXddTJdhJKbHXNZz5jzU0J4k-BqYH1IO2zle07PIAV86aAQlWdMw9Hl9LB-z6UgI0X-2Tc9mbKp4qRsssJ8akrPb5ToOiWI_64qahgMDJBEWhjVWBILuT5k4ugKDi72xV-53WLg1AQ?key=WDvmN8vPYcU6kwrHqV-tBhuD"
+                alt="" width="1000">></p>
+        <p>Admin puede hacer todo lo anterior mas otras gestiones de seguridad.</p><br>
 
-            <h3 id="5-hardware-compatible">5. Hardware Compatible</h3>
-            <p>Para una implementación óptima de <strong>Proxmox VE</strong>, se recomienda el siguiente
-                hardware:</p>
-            <ul>
-                <li><strong>Procesador</strong>: Intel 64 o AMD64 con soporte para virtualización (Intel
-                    VT-x/AMD-V).
-                </li>
-                <li><strong>Memoria RAM</strong>: Mínimo <strong>2 GB</strong> para el sistema y servicios de
-                    Proxmox
-                    VE,
-                    más RAM adicional según las máquinas virtuales. Para <strong>Ceph</strong> o
-                    <strong>ZFS</strong>,
-                    se
-                    recomienda <strong>1 GB extra por cada TB de almacenamiento</strong>.
-                </li>
-                <li><strong>Almacenamiento</strong>: Se recomienda <strong>SSD</strong> para mejor rendimiento y
-                    redundancia.</li>
-                <li><strong>Almacenamiento del sistema operativo</strong>: RAID por hardware con
-                    <strong>BBU</strong>
-                    (Battery Backup Unit) o <strong>ZFS</strong> sin RAID.
-                </li>
-                <li><strong>Almacenamiento de máquinas virtuales</strong>: RAID por hardware con BBU o sin RAID
-                    con
-                    <strong>ZFS</strong>. Ni <strong>ZFS</strong> ni <strong>Ceph</strong> son compatibles con
-                    controladores
-                    RAID por hardware. También se puede usar almacenamiento compartido o distribuido.
-                </li>
-                <li><strong>Red</strong>: Interfaces de red <strong>Gigabit</strong> redundantes, con opción a
-                    <strong>10
-                        Gbit</strong> o superior según el clúster y la tecnología de almacenamiento.
-                </li>
-                <li><strong>Passthrough PCI(e)</strong>: Se requiere una CPU con soporte para
-                    <strong>VT-d</strong> o
-                    <strong>AMD-d</strong>.
-                </li>
-            </ul><br>
+        <h3 id="5-hardware-compatible">5. Hardware Compatible</h3>
+        <p>Para una implementación óptima de <strong>Proxmox VE</strong>, se recomienda el siguiente
+            hardware:</p>
+        <ul>
+            <li><strong>Procesador</strong>: Intel 64 o AMD64 con soporte para virtualización (Intel
+                VT-x/AMD-V).
+            </li>
+            <li><strong>Memoria RAM</strong>: Mínimo <strong>2 GB</strong> para el sistema y servicios de
+                Proxmox
+                VE,
+                más RAM adicional según las máquinas virtuales. Para <strong>Ceph</strong> o
+                <strong>ZFS</strong>,
+                se
+                recomienda <strong>1 GB extra por cada TB de almacenamiento</strong>.
+            </li>
+            <li><strong>Almacenamiento</strong>: Se recomienda <strong>SSD</strong> para mejor rendimiento y
+                redundancia.</li>
+            <li><strong>Almacenamiento del sistema operativo</strong>: RAID por hardware con
+                <strong>BBU</strong>
+                (Battery Backup Unit) o <strong>ZFS</strong> sin RAID.
+            </li>
+            <li><strong>Almacenamiento de máquinas virtuales</strong>: RAID por hardware con BBU o sin RAID
+                con
+                <strong>ZFS</strong>. Ni <strong>ZFS</strong> ni <strong>Ceph</strong> son compatibles con
+                controladores
+                RAID por hardware. También se puede usar almacenamiento compartido o distribuido.
+            </li>
+            <li><strong>Red</strong>: Interfaces de red <strong>Gigabit</strong> redundantes, con opción a
+                <strong>10
+                    Gbit</strong> o superior según el clúster y la tecnología de almacenamiento.
+            </li>
+            <li><strong>Passthrough PCI(e)</strong>: Se requiere una CPU con soporte para
+                <strong>VT-d</strong> o
+                <strong>AMD-d</strong>.
+            </li>
+        </ul><br>
 
-            <h3 id="6-webgrafía">6. Webgrafía</h3>
-            <ol>
-                <li><a
-                        href="https://its.utu.edu.uy/wp-content/uploads/sites/33/2024/07/MANUAL-DE-USUARIO-DEL-SERVIDOR-PROXMOX.pdf">Manual
-                        de Usuario del Servidor Proxmox</a></li>
-                <li><a href="https://www.proxmox.com">Sitio Oficial de Proxmox</a></li>
-                <li><a href="https://docs.netgate.com/pfsense/en/latest/">Documentación de PFSense</a></li>
-                <li><a href="https://isnum.com/">Isnum</a></li>
-            </ol>
+        <h3 id="6-webgrafía">6. Webgrafía</h3>
+        <ol>
+            <li><a
+                    href="https://its.utu.edu.uy/wp-content/uploads/sites/33/2024/07/MANUAL-DE-USUARIO-DEL-SERVIDOR-PROXMOX.pdf">Manual
+                    de Usuario del Servidor Proxmox</a></li>
+            <li><a href="https://www.proxmox.com">Sitio Oficial de Proxmox</a></li>
+            <li><a href="https://docs.netgate.com/pfsense/en/latest/">Documentación de PFSense</a></li>
+            <li><a href="https://isnum.com/">Isnum</a></li>
+        </ol>
     </div>
     <footer>
         <div class="separator"></div>

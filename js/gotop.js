@@ -1,16 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    window.onscroll = function () {
-        if (document.documentElement.scrollTop > 100) {
-            document.querySelector('.go-top-container').classList.add('show');
-        } else {
-            document.querySelector('.go-top-container').classList.remove('show');
-        }
-    };
+    const goTopButton = document.querySelector('.go-top-container');
 
-    document.querySelector('.go-top-container').addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
+    if (goTopButton) {
+        goTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
         });
-    });
+    }
 });

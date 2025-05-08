@@ -1,16 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+    const goTopButton = document.querySelector('.go-top-container');
 
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+    window.addEventListener("scroll", function () {
+        if (document.documentElement.scrollTop > 100) {
+            goTopButton.classList.add('show');
+        } else {
+            goTopButton.classList.remove('show');
+        }
     });
 });

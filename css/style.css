@@ -10,6 +10,27 @@ body {
     text-align: center;
 }
 
+.go-top-container {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    z-index: 1000;
+}
+  
+.go-top-container.show {
+    display: block;
+}
+  
+.go-top-button {
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}  
+
 .video {
     text-align: center;
     margin-bottom: 5%;

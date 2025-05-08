@@ -23,7 +23,7 @@ body {
 }
   
 .go-top-button {
-    background-color: #1da1df;
+    background-color: #4194f3;
     color: #ffffff;
     border-radius: 50%;
     padding: 15px;
@@ -39,7 +39,7 @@ body {
 
 .btn-chat {
     padding: 15px 30px;
-    background-color: #0088cc;
+    background-color: rgb 65, 148, 243;
     color: white;
     font-size: 18px;
     border: none;
@@ -339,7 +339,7 @@ footer {
 }
 
 .header {
-    background: linear-gradient(135deg, rgb(65, 148, 243), #1166d4);
+    background: linear-gradient(135deg, #4194f3, #1166d4);
     color: white;
     text-align: center;
     padding: 20px;
